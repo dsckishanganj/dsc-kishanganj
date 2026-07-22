@@ -328,7 +328,87 @@ Why Choose DSC Kishanganj?
 </p>
 
 </div>
+<section class="container" id="dsc-apply">
 
+<h2 class="section-title">Apply For DSC Certificate</h2>
+
+<div class="card">
+
+<form onsubmit="sendDSCWhatsApp(); return false;">
+
+<label>Name</label>
+<input type="text" id="dscname" placeholder="Enter Your Name" required>
+
+<label>Mobile Number</label>
+<input type="tel" id="dscmobile" placeholder="Enter Mobile Number" required>
+
+<label>Class Type</label>
+<select id="dscclass">
+<option>Class 3</option>
+<option>DGFT</option>
+</select>
+
+<label>User Type</label>
+<select id="dscuser">
+<option>Individual</option>
+<option>Organization</option>
+</select>
+
+<label>Certificate Type</label>
+<select id="dsctype">
+<option>Signature</option>
+<option>Encryption</option>
+<option>Both</option>
+</select>
+
+<label>Validity</label>
+<select id="dscvalidity">
+<option>1 Year</option>
+<option>2 Years</option>
+<option>3 Years</option>
+</select>
+
+<label>Residing Outside India</label>
+<select id="dscoutside">
+<option>No</option>
+<option>Yes</option>
+</select>
+
+<br>
+
+<button class="btn whatsapp" type="submit">
+📲 Submit DSC Request
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<script>
+
+function sendDSCWhatsApp(){
+
+let msg =
+"New DSC Request%0A%0A"+
+"Name: "+document.getElementById("dscname").value+"%0A"+
+"Mobile: "+document.getElementById("dscmobile").value+"%0A"+
+"Class: "+document.getElementById("dscclass").value+"%0A"+
+"User Type: "+document.getElementById("dscuser").value+"%0A"+
+"Certificate: "+document.getElementById("dsctype").value+"%0A"+
+"Validity: "+document.getElementById("dscvalidity").value+"%0A"+
+"Outside India: "+document.getElementById("dscoutside").value;
+
+window.open(
+"https://wa.me/919473371370?text="+msg,
+"_blank"
+);
+
+}
+
+</script>
 </div><section class="container" id="contact">
 
 <h2 class="section-title">Contact Us</h2>
