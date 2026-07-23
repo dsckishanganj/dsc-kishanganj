@@ -408,6 +408,96 @@ window.open(
 
 }
 
+</script><section class="container" id="price-calculator">
+
+<h2 class="section-title">💰 DSC Price Calculator</h2>
+
+<div class="card">
+
+<label>Certificate</label>
+<select id="cert" onchange="calculatePrice()">
+<option value="">Select</option>
+<option value="1350">Class 3 - 1 Year</option>
+<option value="1500">Class 3 - 2 Years</option>
+<option value="2250">Class 3 - 3 Years</option>
+<option value="2000">Combo - 1 Year</option>
+<option value="2250">Combo - 2 Years</option>
+<option value="3350">Combo - 3 Years</option>
+</select>
+
+<br><br>
+
+<label>USB Token</label>
+<select id="token" onchange="calculatePrice()">
+<option value="0">No</option>
+<option value="600">Yes (+₹600)</option>
+</select>
+
+<br><br>
+
+<label>Support Plan</label>
+<select id="support" onchange="calculatePrice()">
+<option value="0">No Support</option>
+<option value="500">1 Year (+₹500)</option>
+<option value="1000">2 Years (+₹1000)</option>
+<option value="1500">3 Years (+₹1500)</option>
+</select>
+
+<hr>
+
+<h3>Certificate Price : ₹ <span id="base">0</span></h3>
+
+<h3>USB Token : ₹ <span id="usb">0</span></h3>
+
+<h3>Support : ₹ <span id="sup">0</span></h3>
+
+<h3>GST (18%) : ₹ <span id="gst">0</span></h3>
+
+<h2 style="color:green">
+Total : ₹ <span id="total">0</span>
+</h2>
+
+<a id="apply" class="btn whatsapp" target="_blank">
+📲 Apply on WhatsApp
+</a>
+
+</div>
+
+</section>
+
+<script>
+
+function calculatePrice(){
+
+let base=Number(document.getElementById("cert").value);
+
+let token=Number(document.getElementById("token").value);
+
+let support=Number(document.getElementById("support").value);
+
+let subtotal=base+token+support;
+
+let gst=Math.round(subtotal*0.18);
+
+let total=subtotal+gst;
+
+document.getElementById("base").innerHTML=base;
+document.getElementById("usb").innerHTML=token;
+document.getElementById("sup").innerHTML=support;
+document.getElementById("gst").innerHTML=gst;
+document.getElementById("total").innerHTML=total;
+
+let msg="Hello, I want DSC.%0A"
++"Certificate Price: ₹"+base
++"%0AUSB Token: ₹"+token
++"%0ASupport: ₹"+support
++"%0AGST: ₹"+gst
++"%0ATotal: ₹"+total;
+
+document.getElementById("apply").href="https://wa.me/919473371370?text="+msg;
+
+}
+
 </script>
 </div><section class="container" id="contact">
 
