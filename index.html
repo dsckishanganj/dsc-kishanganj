@@ -97,7 +97,7 @@ header{
 nav a{
   color:white;
   text-decoration:none;
-  margin-left:20px;
+  margin-left:18px;
   font-weight:500;
   transition:.3s;
 }
@@ -150,6 +150,11 @@ nav a:hover{
 
 .pay-btn{
   background:#ff9800;
+  color:white;
+}
+
+.review-btn{
+  background:#ea4335;
   color:white;
 }
 
@@ -239,8 +244,8 @@ nav a:hover{
   border:0;
 }
 
-/* Payment QR Code Box */
-.payment-box {
+/* Payment & Review QR Box */
+.box-style {
   text-align:center;
   background: #fff;
   padding: 30px;
@@ -252,7 +257,7 @@ nav a:hover{
   max-width: 280px;
   width: 100%;
   height: auto;
-  border: 2px dashed #5f259f; /* PhonePe Purple Accent */
+  border: 2px dashed #003366;
   padding: 10px;
   border-radius: 12px;
   margin: 15px 0;
@@ -294,6 +299,7 @@ footer{
     <a href="#about">About</a>
     <a href="#price-calculator">Calculator</a>
     <a href="#payment">Payment QR</a>
+    <a href="#reviews">Reviews</a>
     <a href="#contact">Contact & Map</a>
   </nav>
 </header>
@@ -451,22 +457,36 @@ footer{
   </div>
 </section>
 
-<!-- UPI Payment Section with Your Exact QR Details -->
+<!-- UPI Payment Section -->
 <section class="container" id="payment">
   <h2 class="section-title">💳 Instant UPI Payment</h2>
   <p class="section-sub">Scan & Pay using PhonePe, Google Pay, Paytm, or BHIM UPI</p>
-  <div class="payment-box" style="max-width:500px; margin:auto;">
+  <div class="box-style" style="max-width:500px; margin:auto;">
     <h3>Bank Of Baroda - 4269</h3>
     <p style="color:#5f259f; font-size:18px; margin-top:5px;"><strong>UPI ID: abdulwahidnizami1@ybl</strong></p>
 
-    <!-- QR Code generated directly from your exact PhonePe UPI ID -->
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=upi://pay?pa=abdulwahidnizami1@ybl&pn=Bank%20Of%20Baroda" alt="Bank Of Baroda PhonePe QR Code" class="qr-code-img">
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=upi://pay?pa=abdulwahidnizami1@ybl&pn=Bank%20Of%20Baroda" alt="Bank Of Baroda PhonePe QR Code" class="qr-code-img" style="border-color:#5f259f;">
 
     <p style="font-size:14px; color:#555;">Supported on PhonePe, Google Pay, Paytm, BHIM & All UPI Apps.</p>
     <br>
     <a class="btn whatsapp" href="https://wa.me/919473371370?text=I%20have%20completed%20the%20payment%20via%20UPI.%20Please%20find%20the%20screenshot%20attached." target="_blank" style="display:block;">
       📲 Send Payment Screenshot
     </a>
+  </div>
+</section>
+
+<!-- Google Review Section -->
+<section class="container" id="reviews">
+  <h2 class="section-title">⭐ Review Us On Google</h2>
+  <p class="section-sub">Aapka feedback humare liye bohot kimti hai! Scan karke Google par apna review dein.</p>
+  <div class="box-style" style="max-width:500px; margin:auto;">
+    <h3 style="color:#ea4335;">DSC Kishanganj / 4 STAR MOBILE</h3>
+    <p style="color:#f4b400; font-size:22px; margin:5px 0;">⭐⭐⭐⭐⭐</p>
+
+    <!-- Review QR Image uploaded by user -->
+    <img src="1000344687.jpg" alt="Scan to Review Us on Google - DSC Kishanganj" class="qr-code-img" style="border-color:#ea4335;">
+
+    <p style="font-size:14px; color:#555;">Scan this QR Code with your camera or Google Lens to leave a review.</p>
   </div>
 </section>
 
