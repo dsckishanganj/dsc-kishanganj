@@ -187,6 +187,30 @@ nav a:hover{color:#ffd54f;}
 }
 .receipt-box h4 { color: #002244; border-bottom: 2px solid #eee; padding-bottom: 8px; margin-bottom: 12px; text-align: center;}
 
+/* PRINT STYLES - Sirf Receipt Print Hogi */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #digital-receipt, #digital-receipt * {
+    visibility: visible;
+  }
+  #digital-receipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border: 2px solid #002244;
+    box-shadow: none;
+    background: white;
+    margin: 0;
+    padding: 20px;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
 footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin-top:60px;}
 @media(max-width:768px){
   header{flex-direction:column;text-align: center;}
@@ -397,8 +421,8 @@ footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin
       <p><strong>Date:</strong> <span id="receipt-date"></span></p>
       
       <div style="display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap;">
-        <a id="receipt-wa-btn" class="btn whatsapp" href="https://wa.me/919473371370?text=Hello,%20I%20have%20initiated%20payment%20of%20%E2%8B%85" target="_blank" style="flex:1; text-align:center; margin:0; padding:10px;">📲 Send Screenshot on WhatsApp</a>
-        <button class="btn" style="background:#333; flex:1; margin:0; padding:10px; color:white; border:none; cursor:pointer; border-radius:50px;" onclick="window.print()">🖨️ Print Receipt</button>
+        <a id="receipt-wa-btn" class="btn whatsapp no-print" href="https://wa.me/919473371370?text=Hello,%20I%20have%20initiated%20payment%20of%20%E2%8B%85" target="_blank" style="flex:1; text-align:center; margin:0; padding:10px;">📲 Send Screenshot on WhatsApp</a>
+        <button class="btn no-print" style="background:#333; flex:1; margin:0; padding:10px; color:white; border:none; cursor:pointer; border-radius:50px;" onclick="window.print()">🖨️ Print Receipt</button>
       </div>
     </div>
 
