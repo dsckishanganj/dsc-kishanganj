@@ -173,6 +173,20 @@ nav a:hover{color:#ffd54f;}
   display: block;
 }
 
+/* Digital Receipt Styles */
+.receipt-box {
+  display: none;
+  margin-top: 20px;
+  padding: 25px;
+  background: #fff;
+  border: 2px dashed #002244;
+  border-radius: 14px;
+  text-align: left;
+  color: #222;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.receipt-box h4 { color: #002244; border-bottom: 2px solid #eee; padding-bottom: 8px; margin-bottom: 12px; text-align: center;}
+
 footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin-top:60px;}
 @media(max-width:768px){
   header{flex-direction:column;text-align: center;}
@@ -369,11 +383,32 @@ footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin
 
     <br>
     <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px;">
-      <a id="calc-phonepe" href="phonepe://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=0&cu=INR" class="btn" style="background:#5f259f; color:white; text-align:center; margin:0;">⚡ Direct Pay ₹<span id="calc-amt-phonepe">0</span> with PhonePe</a>
-      <a id="calc-gpay" href="gpay://upi/pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=0&cu=INR" class="btn" style="background:#4285f4; color:white; text-align:center; margin:0;">⚡ Direct Pay ₹<span id="calc-amt-gpay">0</span> with Google Pay</a>
-      <a id="calc-paytm" href="paytmmp://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=0&cu=INR" class="btn" style="background:#00baf2; color:white; text-align:center; margin:0;">⚡ Direct Pay ₹<span id="calc-amt-paytm">0</span> with Paytm</a>
+      <a id="calc-phonepe" onclick="triggerReceipt()" href="phonepe://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=0&cu=INR" class="btn" style="background:#5f259f; color:white; text-align:center; margin:0;">⚡ Direct Pay ₹<span id="calc-amt-phonepe">0</span> with PhonePe</a>
+      <a id="calc-gpay" onclick="triggerReceipt()" href="gpay://upi/pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=0&cu=INR" class="btn" style="background:#4285f4; color:white; text-align:center; margin:0;">⚡ Direct Pay ₹<span id="calc-amt-gpay">0</span> with Google Pay</a>
+      <a id="calc-paytm" onclick="triggerReceipt()" href="paytmmp://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=0&cu=INR" class="btn" style="background:#00baf2; color:white; text-align:center; margin:0;">⚡ Direct Pay ₹<span id="calc-amt-paytm">0</span> with Paytm</a>
     </div>
 
+    <!-- Automated Digital Receipt Section -->
+    <div id="digital-receipt" class="receipt-box">
+      <h4>🧾 4 STAR MOBILE - PAYMENT RECEIPT</h4>
+      <p><strong>Service:</strong> Digital Signature Certificate (DSC)</p>
+      <p><strong>Total Amount Paid:</strong> ₹<span id="receipt-total-amt">0</span></p>
+      <p><strong>Payment Status:</strong> <span style="color:green; font-weight:bold;">Success (Verified)</span></p>
+      <p><strong>Date:</strong> <span id="receipt-date"></span></p>
+      <button class="btn" style="background:#333; width:100%; margin-top:10px;" onclick="window.print()">🖨️ Print / Save Receipt</button>
+    </div>
+
+    <!-- Auto-Triggered 5-Star Review Section -->
+    <div id="auto-review-section" style="display:none; margin-top:20px; background:#fff3e0; padding:20px; border-radius:12px; text-align:center; border: 1px solid #ffb74d;">
+      <h3 style="color:#e65100; margin-bottom:5px;">⭐ Thank You for Your Payment!</h3>
+      <p style="font-size:14px; color:#555; margin-bottom:12px;">Please support our business by sharing your 5-star experience.</p>
+      <div style="font-size: 26px; color: #ffc107; letter-spacing: 4px; margin-bottom: 10px;">⭐⭐⭐⭐⭐</div>
+      <a class="btn review-btn" href="https://tinyurl.com/Dscknepower-by-4-star-mobile" target="_blank" style="display:block; text-align:center; margin:0;">
+        ⭐ Give 5-Star Review Now
+      </a>
+    </div>
+
+    <br>
     <a id="apply" class="btn whatsapp" href="https://wa.me/919473371370" target="_blank" style="display:inline-block; text-align:center; width:100%;">
       📲 Apply on WhatsApp
     </a>
@@ -528,6 +563,21 @@ function calculatePrice(){
   let msg = `Hello, I want to apply for DSC.%0A%0A*Certificate Base Price:* ₹${base}%0A*USB Token:* ₹${token}%0A*Support:* ₹${support}%0A*GST (18%):* ₹${gst}%0A*Total Amount:* ₹${total}`;
 
   document.getElementById("apply").href = "https://wa.me/919473371370?text=" + encodeURIComponent(msg);
+}
+
+// Function to trigger receipt and 5-star review option automatically on payment click
+function triggerReceipt(){
+  let total = document.getElementById("total").innerText;
+  if(total <= 0) {
+    alert("Please select a certificate first!");
+    return;
+  }
+  document.getElementById("receipt-total-amt").innerText = total;
+  document.getElementById("receipt-date").innerText = new Date().toLocaleDateString();
+  
+  // Show Receipt and Review Box
+  document.getElementById("digital-receipt").style.display = "block";
+  document.getElementById("auto-review-section").style.display = "block";
 }
 </script>
 
