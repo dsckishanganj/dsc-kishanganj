@@ -111,18 +111,48 @@ nav a:hover{color:#ffd54f;}
 .map-responsive{overflow:hidden;padding-bottom:56.25%;position:relative;height:0;border-radius:18px;box-shadow:0 8px 20px rgba(0,0,0,.08);margin-top:15px;}
 .map-responsive iframe{left:0;top:0;height:100%;width:100%;position:absolute;border:0;}
 
-/* Enhanced Review Section Styling */
-.review-showcase-grid {display: grid;grid-template-columns: 1fr 1fr;gap: 30px;align-items: center;}
-.review-box-main {background: linear-gradient(145deg, #ffffff, #fff5f5);border: 2px solid rgba(234, 67, 53, 0.2);position: relative;overflow: hidden;text-align: center;}
-.rating-badge {background: #ea4335;color: #fff;font-weight: 700;font-size: 13px;padding: 4px 14px;border-radius: 20px;display: inline-block;box-shadow: 0 4px 10px rgba(234,67,53,0.3);}
-.stars-container {color: #f4b400;font-size: 22px;margin: 8px 0;letter-spacing: 2px;}
-.testimonial-cards-col {display: flex;flex-direction: column;gap: 20px;}
-.testimonial-card {background: #ffffff;padding: 22px;border-radius: 16px;box-shadow: 0 8px 25px rgba(0,0,0,0.06);border-left: 5px solid #ea4335;transition: transform 0.3s ease;}
-.testimonial-card:hover {transform: translateY(-5px);}
-.reviewer-info {display: flex;justify-content: space-between;align-items: flex-start;margin-bottom: 10px;}
-.reviewer-info h4 {color: #002244;font-size: 16px;font-weight: 700;}
-.rev-tag {font-size: 11px;background: #e8f5e9;color: #2e7d32;padding: 2px 8px;border-radius: 6px;font-weight: 600;}
-.mini-stars {color: #f4b400;font-size: 14px;}
+/* Poster-Style Eye-Catching Review Section */
+.review-poster-box {
+  background: linear-gradient(135deg, #00152b, #003366);
+  color: #fff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0,34,68,0.25);
+  border: 2px solid #ffd700;
+  max-width: 800px;
+  margin: auto;
+}
+.poster-stars {
+  font-size: 32px;
+  color: #ffd700;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 8px rgba(255,215,0,0.5);
+}
+.poster-heading {
+  font-size: 28px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.poster-subtext {
+  font-size: 16px;
+  color: #e0e6ed;
+  max-width: 600px;
+  margin: 0 auto 25px auto;
+}
+.review-highlight-card {
+  background: #ffffff;
+  color: #222;
+  padding: 25px;
+  border-radius: 15px;
+  margin: 20px auto;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  text-align: left;
+}
 
 footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin-top:60px;}
 @media(max-width:768px){
@@ -134,7 +164,7 @@ footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin
   .hero p{font-size:14px;}
   .token-card{width:110px;}
   .token-card img{height:90px;}
-  .review-showcase-grid {grid-template-columns: 1fr;}
+  .poster-heading {font-size: 22px;}
 }
 </style>
 </head>
@@ -342,50 +372,25 @@ footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin
   </div>
 </section>
 
+<!-- Poster Style Eye-Catching Review Section -->
 <section class="container" id="reviews">
-  <h2 class="section-title">⭐ What Our Customers Say</h2>
-  <p class="section-sub">Aapka feedback humare liye bohot kimti hai! Real experiences from trusted clients in Kishanganj.</p>
-  
-  <div class="review-showcase-grid">
-    <!-- Left Side: Interactive QR & Action Card -->
-    <div class="box-style review-box-main">
-      <div class="rating-badge">4.9 / 5.0 Rating</div>
-      <h3 style="color:#ea4335; margin-top: 10px;">DSC Kishanganj / 4 STAR MOBILE</h3>
-      <div class="stars-container">⭐⭐⭐⭐⭐</div>
-      <p style="font-size:13px; color:#666;">Based on verified local business reviews</p>
-
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=https://tinyurl.com/Dscknepower-by-4-star-mobile" alt="Direct Google Review QR Code" class="qr-code-img" style="border-color:#ea4335;">
-
-      <p style="font-size:14px; color:#555; margin-bottom:15px;">Scan QR with phone camera or click below to review:</p>
-      <a class="btn review-btn" href="https://tinyurl.com/Dscknepower-by-4-star-mobile" target="_blank" style="display:block; width:100%;">
-        📍 Leave a Review on Google Maps
+  <div class="review-poster-box">
+    <div class="poster-stars">⭐⭐⭐⭐⭐</div>
+    <h2 class="poster-heading">Support DSC Kishanganj</h2>
+    <p style="font-size: 14px; color: #ffd700; font-weight: 600; margin-bottom: 15px;">POWERED BY 4 STAR MOBILE</p>
+    
+    <p class="poster-subtext">If you're happy with our service, please give us a 5-Star Google Rating and a short review. Your review helps others and motivates us to do even better!</p>
+    
+    <div class="box-style" style="max-width:420px; margin:20px auto; color:#222;">
+      <h3 style="color:#ea4335; margin-bottom: 5px;">Scan to Review</h3>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=https://tinyurl.com/Dscknepower-by-4-star-mobile" alt="Direct Google Review QR Code" class="qr-code-img" style="border-color:#ea4335; margin: 10px 0;">
+      <p style="font-size:13px; color:#555; margin-bottom:15px;">Click the button below or scan QR code via mobile camera:</p>
+      <a class="btn review-btn" href="https://tinyurl.com/Dscknepower-by-4-star-mobile" target="_blank" style="display:block; width:100%; padding: 12px 20px;">
+        ⭐ Click Here to Leave a Review
       </a>
     </div>
 
-    <!-- Right Side: Highlighted Testimonial Cards -->
-    <div class="testimonial-cards-col">
-      <div class="testimonial-card">
-        <div class="reviewer-info">
-          <div>
-            <h4>Md Tanweer Alam</h4>
-            <span class="rev-tag">Verified Contractor</span>
-          </div>
-          <div class="mini-stars">⭐⭐⭐⭐⭐</div>
-        </div>
-        <p>"Fast and reliable service for Class 3 DSC and e-Tender filing in Kishanganj. Got my token within hours at 4 Star Mobile!"</p>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="reviewer-info">
-          <div>
-            <h4>Amit Kumar Verma</h4>
-            <span class="rev-tag">GST & Tax Client</span>
-          </div>
-          <div class="mini-stars">⭐⭐⭐⭐⭐</div>
-        </div>
-        <p>"Best place for digital signatures and tax works. Very helpful nature and transparent pricing. Highly recommended!"</p>
-      </div>
-    </div>
+    <p style="font-size:14px; margin-top:20px; color:#ffcc00; font-weight:600;">🙏 Thank you for your trust and support!</p>
   </div>
 </section>
 
