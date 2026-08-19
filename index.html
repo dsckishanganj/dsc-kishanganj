@@ -110,8 +110,32 @@ nav a:hover{color:#ffd54f;}
 .qr-code-img {max-width: 280px;width: 100%;height: auto;border: 2px dashed #002244;padding: 10px;border-radius: 12px;margin: 15px 0;background: #fff;}
 .map-responsive{overflow:hidden;padding-bottom:56.25%;position:relative;height:0;border-radius:18px;box-shadow:0 8px 20px rgba(0,0,0,.08);margin-top:15px;}
 .map-responsive iframe{left:0;top:0;height:100%;width:100%;position:absolute;border:0;}
+
+/* Enhanced Review Section Styling */
+.review-showcase-grid {display: grid;grid-template-columns: 1fr 1fr;gap: 30px;align-items: center;}
+.review-box-main {background: linear-gradient(145deg, #ffffff, #fff5f5);border: 2px solid rgba(234, 67, 53, 0.2);position: relative;overflow: hidden;text-align: center;}
+.rating-badge {background: #ea4335;color: #fff;font-weight: 700;font-size: 13px;padding: 4px 14px;border-radius: 20px;display: inline-block;box-shadow: 0 4px 10px rgba(234,67,53,0.3);}
+.stars-container {color: #f4b400;font-size: 22px;margin: 8px 0;letter-spacing: 2px;}
+.testimonial-cards-col {display: flex;flex-direction: column;gap: 20px;}
+.testimonial-card {background: #ffffff;padding: 22px;border-radius: 16px;box-shadow: 0 8px 25px rgba(0,0,0,0.06);border-left: 5px solid #ea4335;transition: transform 0.3s ease;}
+.testimonial-card:hover {transform: translateY(-5px);}
+.reviewer-info {display: flex;justify-content: space-between;align-items: flex-start;margin-bottom: 10px;}
+.reviewer-info h4 {color: #002244;font-size: 16px;font-weight: 700;}
+.rev-tag {font-size: 11px;background: #e8f5e9;color: #2e7d32;padding: 2px 8px;border-radius: 6px;font-weight: 600;}
+.mini-stars {color: #f4b400;font-size: 14px;}
+
 footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin-top:60px;}
-@media(max-width:768px){header{flex-direction:column;text-align: center;}.logo-container{margin-bottom: 12px;justify-content: center;}.logo-img{width: 65px;height: 65px;}nav{margin-top:5px;}.hero h1{font-size:26px;}.hero p{font-size:14px;}.token-card{width:110px;}.token-card img{height:90px;}}
+@media(max-width:768px){
+  header{flex-direction:column;text-align: center;}
+  .logo-container{margin-bottom: 12px;justify-content: center;}
+  .logo-img{width: 65px;height: 65px;}
+  nav{margin-top:5px;}
+  .hero h1{font-size:26px;}
+  .hero p{font-size:14px;}
+  .token-card{width:110px;}
+  .token-card img{height:90px;}
+  .review-showcase-grid {grid-template-columns: 1fr;}
+}
 </style>
 </head>
 
@@ -319,19 +343,49 @@ footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin
 </section>
 
 <section class="container" id="reviews">
-  <h2 class="section-title">⭐ Review Us On Google Maps</h2>
-  <p class="section-sub">Aapka feedback humare liye bohot kimti hai! Directly Google Maps par review dene ke liye niche click karein.</p>
-  <div class="box-style" style="max-width:500px; margin:auto;">
-    <h3 style="color:#ea4335;">DSC Kishanganj / 4 STAR MOBILE</h3>
-    <p style="color:#f4b400; font-size:24px; margin:5px 0;">⭐⭐⭐⭐⭐</p>
+  <h2 class="section-title">⭐ What Our Customers Say</h2>
+  <p class="section-sub">Aapka feedback humare liye bohot kimti hai! Real experiences from trusted clients in Kishanganj.</p>
+  
+  <div class="review-showcase-grid">
+    <!-- Left Side: Interactive QR & Action Card -->
+    <div class="box-style review-box-main">
+      <div class="rating-badge">4.9 / 5.0 Rating</div>
+      <h3 style="color:#ea4335; margin-top: 10px;">DSC Kishanganj / 4 STAR MOBILE</h3>
+      <div class="stars-container">⭐⭐⭐⭐⭐</div>
+      <p style="font-size:13px; color:#666;">Based on verified local business reviews</p>
 
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=https://tinyurl.com/Dscknepower-by-4-star-mobile" alt="Direct Google Review QR Code" class="qr-code-img" style="border-color:#ea4335;">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=https://tinyurl.com/Dscknepower-by-4-star-mobile" alt="Direct Google Review QR Code" class="qr-code-img" style="border-color:#ea4335;">
 
-    <p style="font-size:14px; color:#555; margin-bottom:15px;">Scan QR with Mobile Camera / Google Lens OR Click below button:</p>
+      <p style="font-size:14px; color:#555; margin-bottom:15px;">Scan QR with phone camera or click below to review:</p>
+      <a class="btn review-btn" href="https://tinyurl.com/Dscknepower-by-4-star-mobile" target="_blank" style="display:block; width:100%;">
+        📍 Leave a Review on Google Maps
+      </a>
+    </div>
 
-    <a class="btn review-btn" href="https://tinyurl.com/Dscknepower-by-4-star-mobile" target="_blank" style="display:block; width:100%;">
-      📍 Leave a Direct Review on Google Maps
-    </a>
+    <!-- Right Side: Highlighted Testimonial Cards -->
+    <div class="testimonial-cards-col">
+      <div class="testimonial-card">
+        <div class="reviewer-info">
+          <div>
+            <h4>Md Tanweer Alam</h4>
+            <span class="rev-tag">Verified Contractor</span>
+          </div>
+          <div class="mini-stars">⭐⭐⭐⭐⭐</div>
+        </div>
+        <p>"Fast and reliable service for Class 3 DSC and e-Tender filing in Kishanganj. Got my token within hours at 4 Star Mobile!"</p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="reviewer-info">
+          <div>
+            <h4>Amit Kumar Verma</h4>
+            <span class="rev-tag">GST & Tax Client</span>
+          </div>
+          <div class="mini-stars">⭐⭐⭐⭐⭐</div>
+        </div>
+        <p>"Best place for digital signatures and tax works. Very helpful nature and transparent pricing. Highly recommended!"</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -358,12 +412,10 @@ footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin
       <a class="btn whatsapp" href="https://wa.me/919473371370" target="_blank">WhatsApp</a>
     </div>
 
-    <div class="cards" style="margin: 0; grid-column: span 1;">
-      <div class="card" style="height: 100%;">
-        <h3>🗺️ Find Us on Google Maps</h3>
-        <div class="map-responsive">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3588.636688326217!2d87.9400!3d26.0968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDA1JzE4LjUiTiA8N8KwNTYnMjQuMCJF!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+    <div class="card">
+      <h3>🗺️ Find Us on Google Maps</h3>
+      <div class="map-responsive">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3588.636688326217!2d87.9400!3d26.0968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDA1JzE4LjUiTiA8N8KwNTYnMjQuMCJF!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>
