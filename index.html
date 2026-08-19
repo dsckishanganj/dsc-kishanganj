@@ -425,9 +425,9 @@ footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin
 
     <br>
     <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px;">
-      <a id="calc-phonepe" onclick="triggerReceipt()" href="phonepe://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=0&cu=INR" class="btn" style="background:#5f259f; color:white; text-align:center; margin:0;">⚡ Direct Pay ₹<span id="calc-amt-phonepe">0</span> with PhonePe</a>
-      <a id="calc-gpay" onclick="triggerReceipt()" href="gpay://upi/pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=0&cu=INR" class="btn" style="background:#4285f4; color:white; text-align:center; margin:0;">⚡ Direct Pay ₹<span id="calc-amt-gpay">0</span> with Google Pay</a>
-      <a id="calc-paytm" onclick="triggerReceipt()" href="paytmmp://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=0&cu=INR" class="btn" style="background:#00baf2; color:white; text-align:center; margin:0;">⚡ Direct Pay ₹<span id="calc-amt-paytm">0</span> with Paytm</a>
+      <button type="button" onclick="handleDirectPay('phonepe')" class="btn" style="background:#5f259f; color:white; text-align:center; margin:0; border:none; cursor:pointer;">⚡ Direct Pay ₹<span id="calc-amt-phonepe">0</span> with PhonePe</button>
+      <button type="button" onclick="handleDirectPay('gpay')" class="btn" style="background:#4285f4; color:white; text-align:center; margin:0; border:none; cursor:pointer;">⚡ Direct Pay ₹<span id="calc-amt-gpay">0</span> with Google Pay</button>
+      <button type="button" onclick="handleDirectPay('paytm')" class="btn" style="background:#00baf2; color:white; text-align:center; margin:0; border:none; cursor:pointer;">⚡ Direct Pay ₹<span id="calc-amt-paytm">0</span> with Paytm</button>
     </div>
 
     <!-- Automated Digital Receipt Section with Smooth Verification State -->
@@ -440,7 +440,7 @@ footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin
       
       <div style="display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap;">
         <a id="receipt-wa-btn" class="btn whatsapp no-print" href="https://wa.me/919473371370?text=Hello,%20I%20have%20initiated%20payment%20of%20%E2%8B%85" target="_blank" style="flex:1; text-align:center; margin:0; padding:10px;">📲 Send Screenshot on WhatsApp</a>
-        <button class="btn no-print" style="background:#333; flex:1; margin:0; padding:10px; color:white; border:none; cursor:pointer; border-radius:50px;" onclick="window.print()">🖨️ Print Receipt</button>
+        <button type="button" class="btn no-print" style="background:#333; flex:1; margin:0; padding:10px; color:white; border:none; cursor:pointer; border-radius:50px;" onclick="window.print()">🖨️ Print Receipt</button>
       </div>
     </div>
 
@@ -588,14 +588,10 @@ function calculatePrice(){
   document.getElementById("gst").innerText = gst;
   document.getElementById("total").innerText = total;
 
-  // Update Calculator Section Direct Payment Buttons
+  // Update Calculator Section Amount Text
   document.getElementById("calc-amt-phonepe").innerText = total;
   document.getElementById("calc-amt-gpay").innerText = total;
   document.getElementById("calc-amt-paytm").innerText = total;
-
-  document.getElementById("calc-phonepe").href = `phonepe://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=${total}&cu=INR`;
-  document.getElementById("calc-gpay").href = `gpay://upi/pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=${total}&cu=INR`;
-  document.getElementById("calc-paytm").href = `paytmmp://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=${total}&cu=INR`;
 
   // Update Payment Section Buttons (Bottom Section)
   document.getElementById("pay-amt-phonepe").innerText = total;
@@ -611,23 +607,38 @@ function calculatePrice(){
   document.getElementById("apply").href = "https://wa.me/919473371370?text=" + encodeURIComponent(msg);
 }
 
-// Function to trigger receipt and smooth screenshot follow-up
-function triggerReceipt(){
+// Function to handle Direct Pay clicks safely without breaking receipt generation
+function handleDirectPay(appType){
   let total = document.getElementById("total").innerText;
-  if(total <= 0) {
+  if(Number(total) <= 0) {
     alert("Please select a certificate first!");
     return;
   }
+
+  // 1. Generate and display receipt & review section on screen
   document.getElementById("receipt-total-amt").innerText = total;
   document.getElementById("receipt-date").innerText = new Date().toLocaleDateString();
   
-  // Dynamic WhatsApp link setup with total amount inside receipt
   let receiptMsg = `Hello, I have initiated a payment of ₹${total} for DSC at 4 Star Mobile. Here is my payment screenshot:`;
   document.getElementById("receipt-wa-btn").href = "https://wa.me/919473371370?text=" + encodeURIComponent(receiptMsg);
 
-  // Show Receipt and Review Box smoothly
   document.getElementById("digital-receipt").style.display = "block";
   document.getElementById("auto-review-section").style.display = "block";
+
+  // 2. Build the appropriate UPI link
+  let upiLink = "";
+  if(appType === 'phonepe'){
+    upiLink = `phonepe://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=${total}&cu=INR`;
+  } else if(appType === 'gpay'){
+    upiLink = `gpay://upi/pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=${total}&cu=INR`;
+  } else if(appType === 'paytm'){
+    upiLink = `paytmmp://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=${total}&cu=INR`;
+  }
+
+  // 3. Open UPI App after a short delay so the receipt renders properly first
+  setTimeout(function() {
+    window.location.href = upiLink;
+  }, 300);
 }
 </script>
 
