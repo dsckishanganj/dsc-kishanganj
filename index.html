@@ -34,10 +34,16 @@ header{background:linear-gradient(135deg,#002244,#004488);color:#fff;padding:12p
 .sub-tagline {font-size: 11px;background: linear-gradient(90deg, #ffcc00, #ff9900);color: #000;font-weight: 700;padding: 3px 10px;border-radius: 20px;display: inline-block;margin-top: 4px;text-transform: uppercase;letter-spacing: 0.8px;box-shadow: 0 2px 5px rgba(0,0,0,0.2);width: fit-content;}
 nav a{color:white;text-decoration:none;margin-left:18px;font-weight:500;transition:.3s;}
 nav a:hover{color:#ffd54f;}
-.hero{background:linear-gradient(rgba(0,34,68,.85),rgba(0,34,68,.85));color:white;text-align:center;padding:80px 20px;}
-.hero h1{font-size:42px;margin-bottom:15px;}
-.hero p{font-size:18px;max-width:850px;margin:auto;}
-.dsc-token-img {max-width: 260px;width: 100%;height: auto;margin: 20px auto 0 auto;display: block;border-radius: 12px;box-shadow: 0 8px 20px rgba(0,0,0,0.3);}
+.hero{background:linear-gradient(rgba(0,34,68,.85),rgba(0,34,68,.85));color:white;text-align:center;padding:60px 20px;}
+.hero h1{font-size:38px;margin-bottom:15px;}
+.hero p{font-size:17px;max-width:850px;margin:auto;}
+
+/* Multi Token Display Styling */
+.tokens-grid {display: flex;justify-content: center;align-items: center;gap: 20px;flex-wrap: wrap;margin-top: 25px;}
+.token-card {background: rgba(255,255,255,0.1);padding: 12px;border-radius: 12px;text-align: center;border: 1px solid rgba(255,255,255,0.2);backdrop-filter: blur(5px);}
+.token-card img {height: 130px;width: auto;object-fit: contain;display: block;margin: 0 auto 8px auto;filter: drop-shadow(0px 5px 8px rgba(0,0,0,0.4));}
+.token-card span {font-size: 13px;font-weight: 600;color: #ffd700;display: block;}
+
 .buttons{margin-top:30px;}
 .btn{display:inline-block;padding:14px 30px;margin:8px;border-radius:50px;text-decoration:none;font-weight:600;transition:.3s;}
 .call{background:#1976d2;color:white;}
@@ -59,7 +65,7 @@ nav a:hover{color:#ffd54f;}
 .map-responsive{overflow:hidden;padding-bottom:56.25%;position:relative;height:0;border-radius:18px;box-shadow:0 8px 20px rgba(0,0,0,.08);margin-top:15px;}
 .map-responsive iframe{left:0;top:0;height:100%;width:100%;position:absolute;border:0;}
 footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin-top:60px;}
-@media(max-width:768px){header{flex-direction:column;text-align: center;}.logo-container{margin-bottom: 12px;justify-content: center;}nav{margin-top:5px;}.hero h1{font-size:28px;}.hero p{font-size:15px;}}
+@media(max-width:768px){header{flex-direction:column;text-align: center;}.logo-container{margin-bottom: 12px;justify-content: center;}nav{margin-top:5px;}.hero h1{font-size:26px;}.hero p{font-size:14px;}.token-card img{height:100px;}}
 </style>
 </head>
 
@@ -88,8 +94,21 @@ footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin
   <h1>Digital Signature Certificate & Govt Tender Services in Kishanganj</h1>
   <p>Trusted Class 3 Digital Signature Certificate (DSC), Government e-Tender Filing, GeM Registration, GST, MCA, Income Tax & Online Digital Services in Kishanganj, Bihar.</p>
   
-  <!-- Exact Token File Name Linked Here -->
-  <img src="1000314401-removebg-preview.png" alt="DSC USB Token" class="dsc-token-img">
+  <!-- Multiple USB Tokens Showcase -->
+  <div class="tokens-grid">
+    <div class="token-card">
+      <img src="1000314401-removebg-preview.png" alt="HYP2003 Token">
+      <span>HYP2003 Token</span>
+    </div>
+    <div class="token-card">
+      <img src="1000314406-removebg-preview.png" alt="mToken Crypto">
+      <span>mToken Crypto</span>
+    </div>
+    <div class="token-card">
+      <img src="https://img.icons8.com/isometric-folders/344/usb-memory-stick.png" alt="ProxKey Token">
+      <span>ProxKey Token</span>
+    </div>
+  </div>
 
   <div class="buttons">
     <a class="btn call" href="tel:9473371370">📞 Call Now</a>
