@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+  color:white;
+  padding:60px 25px;
+  text-align:center;
+  margin-top:40px;<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -210,12 +213,355 @@ nav a:hover{
   padding-left:18px;
 }
 
-.highlight{
-  background:#003366;
-  color:white;
-  padding:60px 25px;
+.box-style {
   text-align:center;
-  margin-top:40px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+.qr-code-img {
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+  border: 2px dashed #003366;
+  padding: 10px;
+  border-radius: 12px;
+  margin: 15px 0;
+  background: #fff;
+}
+
+.map-responsive{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+  border-radius:18px;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+  margin-top:15px;
+}
+
+.map-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+  border:0;
+}
+
+footer{
+  background:#001f3f;
+  color:white;
+  text-align:center;
+  padding:30px;
+  margin-top:60px;
+}
+
+@media(max-width:768px){
+  header{
+    flex-direction:column;
+  }
+  nav{
+    margin-top:15px;
+  }
+  .hero h1{
+    font-size:34px;
+  }
+  .hero p{
+    font-size:17px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">DSC KISHANGANJ</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#price-calculator">Calculator</a>
+    <a href="#payment">Payment QR</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact & Map</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Digital Signature Certificate & Govt Tender Services in Kishanganj</h1>
+  <p>Trusted Class 3 Digital Signature Certificate (DSC), Government e-Tender Filing, GeM Registration, GST, MCA, Income Tax & Online Digital Services in Kishanganj, Bihar.</p>
+  <div class="buttons">
+    <a class="btn call" href="tel:9473371370">📞 Call Now</a>
+    <a class="btn whatsapp" href="https://wa.me/919473371370" target="_blank">💬 WhatsApp</a>
+    <a class="btn pay-btn" href="#payment">💳 Pay Online</a>
+    <a class="btn review-btn" href="#reviews">⭐ Review Us</a>
+  </div>
+</section>
+
+<section class="container" id="services">
+  <h2 class="section-title">Our Professional Services in Kishanganj</h2>
+  <p class="section-sub">Complete Digital Signature & Government e-Services Under One Roof</p>
+  <div class="cards">
+    <div class="card">
+      <h3>🔐 Digital Signature Certificate (DSC)</h3>
+      <ul>
+        <li>Class 3 DSC (Individual & Organization)</li>
+        <li>e-Tender & GeM Specific DSC</li>
+        <li>DGFT Digital Signature</li>
+        <li>USB Crypto Token Support</li>
+        <li>Same Day DSC Renewal</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🏛 Government Tender Filing</h3>
+      <ul>
+        <li>e-Tender Registration & Submission</li>
+        <li>Tender Bid Preparation & Upload</li>
+        <li>Document Verification</li>
+        <li>Bihar Govt & Central e-Procurement Support</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>💼 Business & Tax Services</h3>
+      <ul>
+        <li>GST Registration & Return Filing</li>
+        <li>Income Tax Return (ITR)</li>
+        <li>MCA / ROC Compliance</li>
+        <li>UDYAM Registration for MSME</li>
+        <li>PAN & TAN Registration</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="card" style="text-align:center;">
+    <img src="1000314406-removebg-preview.png" alt="Digital Signature USB Token Kishanganj" loading="lazy" style="max-width:100%; height:auto; border-radius:15px;">
+    <h3 style="margin-top:15px;">Digital Signature USB Token</h3>
+  </div>
+</div>
+
+<section class="container" id="about">
+  <h2 class="section-title">About DSC Kishanganj</h2>
+  <p style="text-align:center;max-width:900px;margin:auto;font-size:18px;">
+    DSC Kishanganj (4 STAR MOBILE) provides reliable Digital Signature Certificates (Class 3 DSC), Government e-Tender Filing, GeM Registration and Online Government Services in Kishanganj, Bihar.
+  </p>
+</section>
+
+<section class="container" id="dsc-apply">
+  <h2 class="section-title">Apply For DSC Certificate</h2>
+  <div class="card" style="max-width:700px; margin:auto;">
+    <form onsubmit="sendDSCWhatsApp(); return false;">
+      <label for="dscname"><strong>Name:</strong></label>
+      <input type="text" id="dscname" name="dscname" placeholder="Enter Your Name" required style="width:100%;padding:10px;margin:8px 0 15px 0;">
+
+      <label for="dscmobile"><strong>Mobile Number:</strong></label>
+      <input type="tel" id="dscmobile" name="dscmobile" placeholder="Enter Mobile Number" required style="width:100%;padding:10px;margin:8px 0 15px 0;">
+
+      <label for="dscclass"><strong>Class Type:</strong></label>
+      <select id="dscclass" name="dscclass" style="width:100%;padding:10px;margin:8px 0 15px 0;">
+        <option>Class 3</option>
+        <option>DGFT</option>
+      </select>
+
+      <label for="dscuser"><strong>User Type:</strong></label>
+      <select id="dscuser" name="dscuser" style="width:100%;padding:10px;margin:8px 0 15px 0;">
+        <option>Individual</option>
+        <option>Organization</option>
+      </select>
+
+      <label for="dsctype"><strong>Certificate Type:</strong></label>
+      <select id="dsctype" name="dsctype" style="width:100%;padding:10px;margin:8px 0 15px 0;">
+        <option>Signature</option>
+        <option>Encryption</option>
+        <option>Both</option>
+      </select>
+
+      <label for="dscvalidity"><strong>Validity:</strong></label>
+      <select id="dscvalidity" name="dscvalidity" style="width:100%;padding:10px;margin:8px 0 15px 0;">
+        <option>1 Year</option>
+        <option>2 Years</option>
+        <option>3 Years</option>
+      </select>
+
+      <label for="dscoutside"><strong>Residing Outside India:</strong></label>
+      <select id="dscoutside" name="dscoutside" style="width:100%;padding:10px;margin:8px 0 20px 0;">
+        <option>No</option>
+        <option>Yes</option>
+      </select>
+
+      <button class="btn whatsapp" type="submit" style="width:100%; cursor:pointer;">
+        📲 Submit DSC Request
+      </button>
+    </form>
+  </div>
+</section>
+
+<section class="container" id="price-calculator">
+  <h2 class="section-title">💰 DSC Price Calculator</h2>
+  <div class="card" style="max-width:700px; margin:auto;">
+    <label for="cert"><strong>Certificate:</strong></label>
+    <select id="cert" onchange="calculatePrice()" style="width:100%;padding:10px;margin:8px 0 15px 0;">
+      <option value="0">Select Certificate</option>
+      <option value="1350">Class 3 - 1 Year</option>
+      <option value="1500">Class 3 - 2 Years</option>
+      <option value="2250">Class 3 - 3 Years</option>
+      <option value="2000">Combo - 1 Year</option>
+      <option value="2250">Combo - 2 Years</option>
+      <option value="3350">Combo - 3 Years</option>
+    </select>
+
+    <label for="token"><strong>USB Token:</strong></label>
+    <select id="token" onchange="calculatePrice()" style="width:100%;padding:10px;margin:8px 0 15px 0;">
+      <option value="0">No</option>
+      <option value="600">Yes (+₹600)</option>
+    </select>
+
+    <label for="support"><strong>Support Plan:</strong></label>
+    <select id="support" onchange="calculatePrice()" style="width:100%;padding:10px;margin:8px 0 15px 0;">
+      <option value="0">No Support</option>
+      <option value="500">1 Year (+₹500)</option>
+      <option value="1000">2 Years (+₹1000)</option>
+      <option value="1500">3 Years (+₹1500)</option>
+    </select>
+
+    <hr style="margin:15px 0;">
+
+    <h3>Certificate Price : ₹ <span id="base">0</span></h3>
+    <h3>USB Token : ₹ <span id="usb">0</span></h3>
+    <h3>Support : ₹ <span id="sup">0</span></h3>
+    <h3>GST (18%) : ₹ <span id="gst">0</span></h3>
+
+    <h2 style="color:green;margin-top:10px;">Total : ₹ <span id="total">0</span></h2>
+
+    <br>
+    <a id="apply" class="btn whatsapp" href="https://wa.me/919473371370" target="_blank" style="display:inline-block; text-align:center; width:100%;">
+      📲 Apply on WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- UPI Payment Section -->
+<section class="container" id="payment">
+  <h2 class="section-title">💳 Instant UPI Payment</h2>
+  <p class="section-sub">Scan & Pay using PhonePe, Google Pay, Paytm, or BHIM UPI</p>
+  <div class="box-style" style="max-width:500px; margin:auto;">
+    <h3>Bank Of Baroda - 4269</h3>
+    <p style="color:#5f259f; font-size:18px; margin-top:5px;"><strong>UPI ID: abdulwahidnizami1@ybl</strong></p>
+
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=upi://pay?pa=abdulwahidnizami1@ybl&pn=Bank%20Of%20Baroda" alt="Bank Of Baroda PhonePe QR Code" class="qr-code-img" style="border-color:#5f259f;">
+
+    <p style="font-size:14px; color:#555;">Supported on PhonePe, Google Pay, Paytm, BHIM & All UPI Apps.</p>
+    <br>
+    <a class="btn whatsapp" href="https://wa.me/919473371370?text=I%20have%20completed%20the%20payment%20via%20UPI.%20Please%20find%20the%20screenshot%20attached." target="_blank" style="display:block;">
+      📲 Send Payment Screenshot
+    </a>
+  </div>
+</section>
+
+<!-- Working Google Review Section -->
+<section class="container" id="reviews">
+  <h2 class="section-title">⭐ Review Us On Google</h2>
+  <p class="section-sub">Aapka feedback humare liye bohot kimti hai! Neeche diye button par click karein ya QR scan karein.</p>
+  <div class="box-style" style="max-width:500px; margin:auto;">
+    <h3 style="color:#ea4335;">DSC Kishanganj / 4 STAR MOBILE</h3>
+    <p style="color:#f4b400; font-size:24px; margin:5px 0;">⭐⭐⭐⭐⭐</p>
+
+    <!-- Auto Generated Dynamic QR Code for Direct Google Search Review Link -->
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=https://g.page/r/search?q=4+STAR+MOBILE+Kishanganj" alt="Scan to Review Us on Google" class="qr-code-img" style="border-color:#ea4335;">
+
+    <p style="font-size:14px; color:#555; margin-bottom:15px;">Scan QR with Mobile Camera / Google Lens OR Click below button:</p>
+
+    <!-- Direct Review Button -->
+    <a class="btn review-btn" href="https://g.page/r/search?q=4+STAR+MOBILE+Kishanganj" target="_blank" style="display:block; width:100%;">
+      ✍️ Write a Review on Google
+    </a>
+  </div>
+</section>
+
+<section class="container" id="contact">
+  <h2 class="section-title">Contact Us & Location</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>📍 Office Address</h3>
+      <p>
+        <strong>4 STAR MOBILE</strong><br>
+        Mahaveer Marg,<br>
+        Kishanganj, Bihar - 855107, India
+      </p>
+      <p style="margin-top:10px;">📞 <strong>Call:</strong> 9473371370</p>
+      <p>💬 <strong>WhatsApp:</strong> 9473371370</p>
+      <p style="margin-top:10px;">🕘 Monday - Saturday<br>9:00 AM - 7:00 PM</p>
+      <br>
+      <a class="btn call" href="tel:9473371370">Call Now</a>
+      <a class="btn whatsapp" href="https://wa.me/919473371370" target="_blank">WhatsApp</a>
+    </div>
+
+    <div class="card">
+      <h3>🗺️ Find Us on Google Maps</h3>
+      <div class="map-responsive">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3588.636688326217!2d87.9400!3d26.0968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDA1JzE4LjUiTiA4N8KwNTYnMjQuMCJF!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Floating Action Buttons -->
+<a href="tel:9473371370" aria-label="Call Us" style="position:fixed;bottom:90px;right:20px;background:#0d6efd;color:#fff;padding:15px 18px;border-radius:50%;text-decoration:none;font-size:22px;box-shadow:0 5px 15px rgba(0,0,0,.3);z-index:999;">📞</a>
+
+<a href="https://wa.me/919473371370" aria-label="WhatsApp Us" target="_blank" style="position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:15px 18px;border-radius:50%;text-decoration:none;font-size:22px;box-shadow:0 5px 15px rgba(0,0,0,.3);z-index:999;">💬</a>
+
+<footer>
+  <h3>DSC KISHANGANJ</h3>
+  <p>Digital Signature Certificate | Government Tender Filing | Online Services</p>
+  <p style="margin-top:10px;">📍 Mahaveer Marg, Kishanganj, Bihar</p>
+  <p>📞 Call / WhatsApp: +91 9473371370</p>
+  <p style="margin-top:20px;font-size:14px;">© 2026 DSC Kishanganj. All Rights Reserved.</p>
+</footer>
+
+<script>
+function sendDSCWhatsApp(){
+  let name = encodeURIComponent(document.getElementById("dscname").value);
+  let mobile = encodeURIComponent(document.getElementById("dscmobile").value);
+  let dscclass = encodeURIComponent(document.getElementById("dscclass").value);
+  let user = encodeURIComponent(document.getElementById("dscuser").value);
+  let type = encodeURIComponent(document.getElementById("dsctype").value);
+  let validity = encodeURIComponent(document.getElementById("dscvalidity").value);
+  let outside = encodeURIComponent(document.getElementById("dscoutside").value);
+
+  let msg = `New DSC Request%0A%0A*Name:* ${name}%0A*Mobile:* ${mobile}%0A*Class:* ${dscclass}%0A*User Type:* ${user}%0A*Certificate:* ${type}%0A*Validity:* ${validity}%0A*Outside India:* ${outside}`;
+
+  window.open("https://wa.me/919473371370?text=" + msg, "_blank");
+}
+
+function calculatePrice(){
+  let base = Number(document.getElementById("cert").value);
+  let token = Number(document.getElementById("token").value);
+  let support = Number(document.getElementById("support").value);
+
+  let subtotal = base + token + support;
+  let gst = Math.round(subtotal * 0.18);
+  let total = subtotal + gst;
+
+  document.getElementById("base").innerText = base;
+  document.getElementById("usb").innerText = token;
+  document.getElementById("sup").innerText = support;
+  document.getElementById("gst").innerText = gst;
+  document.getElementById("total").innerText = total;
+
+  let msg = `Hello, I want to apply for DSC.%0A%0A*Certificate Base Price:* ₹${base}%0A*USB Token:* ₹${token}%0A*Support:* ₹${support}%0A*GST (18%):* ₹${gst}%0A*Total Amount:* ₹${total}`;
+
+  document.getElementById("apply").href = "https://wa.me/919473371370?text=" + encodeURIComponent(msg);
+}
+</script>
+
+</body>
+</html>
+
   border-radius:18px;
 }
 
