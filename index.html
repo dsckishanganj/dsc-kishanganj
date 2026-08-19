@@ -28,8 +28,8 @@
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "DSC Kishanganj - 4 STAR MOBILE",
-  "image": "1000314406-removebg-preview.png",
+  "name": "DSC Kishanganj - Powered by 4 STAR MOBILE",
+  "image": "1000326249.png",
   "telephone": "+919473371370",
   "address": {
     "@type": "PostalAddress",
@@ -79,7 +79,7 @@ body{
 header{
   background:linear-gradient(135deg,#003366,#0055aa);
   color:#fff;
-  padding:18px 8%;
+  padding:15px 8%;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -89,9 +89,37 @@ header{
   box-shadow:0 4px 10px rgba(0,0,0,.15);
 }
 
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #fff;
+  padding: 2px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
 .logo{
-  font-size:28px;
+  font-size:24px;
   font-weight:700;
+  line-height: 1.1;
+}
+
+.sub-tagline {
+  font-size: 12px;
+  color: #ffd54f;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
 nav a{
@@ -265,8 +293,11 @@ footer{
   header{
     flex-direction:column;
   }
+  .logo-container{
+    margin-bottom: 10px;
+  }
   nav{
-    margin-top:15px;
+    margin-top:5px;
   }
   .hero h1{
     font-size:34px;
@@ -281,7 +312,13 @@ footer{
 <body>
 
 <header>
-  <div class="logo">DSC KISHANGANJ</div>
+  <div class="logo-container">
+    <img src="1000326249.png" alt="4 Star Mobile Logo" class="logo-img">
+    <div class="logo-text">
+      <div class="logo">DSC KISHANGANJ</div>
+      <span class="sub-tagline">Powered by 4 Star Mobile</span>
+    </div>
+  </div>
   <nav>
     <a href="#">Home</a>
     <a href="#services">Services</a>
@@ -351,7 +388,7 @@ footer{
 <section class="container" id="about">
   <h2 class="section-title">About DSC Kishanganj</h2>
   <p style="text-align:center;max-width:900px;margin:auto;font-size:18px;">
-    DSC Kishanganj (4 STAR MOBILE) provides reliable Digital Signature Certificates (Class 3 DSC), Government e-Tender Filing, GeM Registration and Online Government Services in Kishanganj, Bihar.
+    DSC Kishanganj (Powered by 4 STAR MOBILE) provides reliable Digital Signature Certificates (Class 3 DSC), Government e-Tender Filing, GeM Registration and Online Government Services in Kishanganj, Bihar.
   </p>
 </section>
 
@@ -527,8 +564,9 @@ footer{
 
 <footer>
   <h3>DSC KISHANGANJ</h3>
-  <p>Digital Signature Certificate | Government Tender Filing | Online Services</p>
-  <p style="margin-top:10px;">📍 4 STAR MOBILE, Mahaveer Marg, Kishanganj, Bihar</p>
+  <p>Powered by 4 STAR MOBILE</p>
+  <p style="margin-top:10px;">Digital Signature Certificate | Government Tender Filing | Online Services</p>
+  <p style="margin-top:5px;">📍 4 STAR MOBILE, Mahaveer Marg, Kishanganj, Bihar</p>
   <p>📞 Call / WhatsApp: +91 9473371370</p>
   <p style="margin-top:20px;font-size:14px;">© 2026 DSC Kishanganj. All Rights Reserved.</p>
 </footer>
