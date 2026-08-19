@@ -368,6 +368,12 @@ footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin
     <h2 style="color:green;margin-top:10px;">Total : ₹ <span id="total">0</span></h2>
 
     <br>
+    <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px;">
+      <a id="calc-phonepe" href="phonepe://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=0&cu=INR" class="btn" style="background:#5f259f; color:white; text-align:center; margin:0;">⚡ Direct Pay ₹<span id="calc-amt-phonepe">0</span> with PhonePe</a>
+      <a id="calc-gpay" href="gpay://upi/pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=0&cu=INR" class="btn" style="background:#4285f4; color:white; text-align:center; margin:0;">⚡ Direct Pay ₹<span id="calc-amt-gpay">0</span> with Google Pay</a>
+      <a id="calc-paytm" href="paytmmp://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=0&cu=INR" class="btn" style="background:#00baf2; color:white; text-align:center; margin:0;">⚡ Direct Pay ₹<span id="calc-amt-paytm">0</span> with Paytm</a>
+    </div>
+
     <a id="apply" class="btn whatsapp" href="https://wa.me/919473371370" target="_blank" style="display:inline-block; text-align:center; width:100%;">
       📲 Apply on WhatsApp
     </a>
@@ -381,7 +387,7 @@ footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin
     <h3>Bank Of Baroda - 4269</h3>
     <p style="color:#5f259f; font-size:18px; margin-top:5px;"><strong>UPI ID: abdulwahidnizami1@ybl</strong></p>
 
-    <!-- Dynamic Payment Buttons Linked with Calculator Total Amount -->
+    <!-- Payment App Buttons Linked with Calculator Total Amount -->
     <div style="display: flex; flex-direction: column; gap: 10px; margin: 20px 0;">
       <a id="pay-phonepe" href="phonepe://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=0&cu=INR" class="btn" style="background:#5f259f; color:white;">Pay ₹<span id="pay-amt-phonepe">0</span> with PhonePe</a>
       <a id="pay-gpay" href="gpay://upi/pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=0&cu=INR" class="btn" style="background:#4285f4; color:white;">Pay ₹<span id="pay-amt-gpay">0</span> with Google Pay</a>
@@ -501,7 +507,16 @@ function calculatePrice(){
   document.getElementById("gst").innerText = gst;
   document.getElementById("total").innerText = total;
 
-  // Update dynamic payment button amounts and links
+  // Update Calculator Section Direct Payment Buttons
+  document.getElementById("calc-amt-phonepe").innerText = total;
+  document.getElementById("calc-amt-gpay").innerText = total;
+  document.getElementById("calc-amt-paytm").innerText = total;
+
+  document.getElementById("calc-phonepe").href = `phonepe://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=${total}&cu=INR`;
+  document.getElementById("calc-gpay").href = `gpay://upi/pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=${total}&cu=INR`;
+  document.getElementById("calc-paytm").href = `paytmmp://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=${total}&cu=INR`;
+
+  // Update Payment Section Buttons (Bottom Section)
   document.getElementById("pay-amt-phonepe").innerText = total;
   document.getElementById("pay-amt-gpay").innerText = total;
   document.getElementById("pay-amt-paytm").innerText = total;
