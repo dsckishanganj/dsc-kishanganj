@@ -21,7 +21,7 @@
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <!-- Google Search Rich Snippet / Local Business Schema (JSON-LD) -->
 <script type="application/ld+json">
@@ -77,31 +77,33 @@ body{
 }
 
 header{
-  background:linear-gradient(135deg,#003366,#0055aa);
+  background:linear-gradient(135deg,#002244,#004488);
   color:#fff;
-  padding:15px 8%;
+  padding:12px 6%;
   display:flex;
   justify-content:space-between;
   align-items:center;
   position:sticky;
   top:0;
   z-index:1000;
-  box-shadow:0 4px 10px rgba(0,0,0,.15);
+  box-shadow:0 4px 12px rgba(0,0,0,.25);
 }
 
 .logo-container {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
 .logo-img {
-  width: 50px;
-  height: 50px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
   object-fit: cover;
   background: #fff;
-  padding: 2px;
+  padding: 3px;
+  border: 2px solid #ffd700;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
 
 .logo-text {
@@ -111,15 +113,26 @@ header{
 
 .logo{
   font-size:24px;
-  font-weight:700;
+  font-weight:800;
   line-height: 1.1;
+  letter-spacing: 0.5px;
+  color: #ffffff;
 }
 
+/* Highlighted Powered By Badge */
 .sub-tagline {
-  font-size: 12px;
-  color: #ffd54f;
-  font-weight: 500;
-  letter-spacing: 0.5px;
+  font-size: 11px;
+  background: linear-gradient(90deg, #ffcc00, #ff9900);
+  color: #000;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  width: fit-content;
 }
 
 nav a{
@@ -135,19 +148,19 @@ nav a:hover{
 }
 
 .hero{
-  background:linear-gradient(rgba(0,51,102,.75),rgba(0,51,102,.75)),url('file_000000002718820792205ff8022e0feb.png') center/cover;
+  background:linear-gradient(rgba(0,34,68,.8),rgba(0,34,68,.8)),url('file_000000002718820792205ff8022e0feb.png') center/cover;
   color:white;
   text-align:center;
-  padding:100px 20px;
+  padding:90px 20px;
 }
 
 .hero h1{
-  font-size:48px;
+  font-size:46px;
   margin-bottom:15px;
 }
 
 .hero p{
-  font-size:20px;
+  font-size:19px;
   max-width:850px;
   margin:auto;
 }
@@ -159,7 +172,7 @@ nav a:hover{
 .btn{
   display:inline-block;
   padding:14px 30px;
-  margin:10px;
+  margin:8px;
   border-radius:50px;
   text-decoration:none;
   font-weight:600;
@@ -206,7 +219,7 @@ nav a:hover{
 .section-title{
   text-align:center;
   font-size:36px;
-  color:#003366;
+  color:#002244;
   margin-bottom:15px;
 }
 
@@ -235,7 +248,7 @@ nav a:hover{
 }
 
 .card h3{
-  color:#003366;
+  color:#002244;
   margin-bottom:12px;
 }
 
@@ -255,7 +268,7 @@ nav a:hover{
   max-width: 280px;
   width: 100%;
   height: auto;
-  border: 2px dashed #003366;
+  border: 2px dashed #002244;
   padding: 10px;
   border-radius: 12px;
   margin: 15px 0;
@@ -282,28 +295,30 @@ nav a:hover{
 }
 
 footer{
-  background:#001f3f;
+  background:#00152b;
   color:white;
   text-align:center;
-  padding:30px;
+  padding:35px 20px;
   margin-top:60px;
 }
 
 @media(max-width:768px){
   header{
     flex-direction:column;
+    text-align: center;
   }
   .logo-container{
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    justify-content: center;
   }
   nav{
     margin-top:5px;
   }
   .hero h1{
-    font-size:34px;
+    font-size:32px;
   }
   .hero p{
-    font-size:17px;
+    font-size:16px;
   }
 }
 </style>
@@ -313,10 +328,11 @@ footer{
 
 <header>
   <div class="logo-container">
-    <img src="1000326249.png" alt="4 Star Mobile Logo" class="logo-img">
+    <!-- Guaranteed Image displaying with fallback -->
+    <img src="1000326249.png" alt="4 Star Mobile Logo" class="logo-img" onerror="this.onerror=null; this.src='1000326249_2.png';">
     <div class="logo-text">
       <div class="logo">DSC KISHANGANJ</div>
-      <span class="sub-tagline">Powered by 4 Star Mobile</span>
+      <span class="sub-tagline">⚡ POWERED BY 4 STAR MOBILE</span>
     </div>
   </div>
   <nav>
@@ -388,7 +404,7 @@ footer{
 <section class="container" id="about">
   <h2 class="section-title">About DSC Kishanganj</h2>
   <p style="text-align:center;max-width:900px;margin:auto;font-size:18px;">
-    DSC Kishanganj (Powered by 4 STAR MOBILE) provides reliable Digital Signature Certificates (Class 3 DSC), Government e-Tender Filing, GeM Registration and Online Government Services in Kishanganj, Bihar.
+    DSC Kishanganj <span class="sub-tagline" style="vertical-align:middle; margin-left:5px;">POWERED BY 4 STAR MOBILE</span> provides reliable Digital Signature Certificates (Class 3 DSC), Government e-Tender Filing, GeM Registration and Online Government Services in Kishanganj, Bihar.
   </p>
 </section>
 
@@ -564,8 +580,8 @@ footer{
 
 <footer>
   <h3>DSC KISHANGANJ</h3>
-  <p>Powered by 4 STAR MOBILE</p>
-  <p style="margin-top:10px;">Digital Signature Certificate | Government Tender Filing | Online Services</p>
+  <div class="sub-tagline" style="margin: 8px auto 15px auto;">⚡ POWERED BY 4 STAR MOBILE</div>
+  <p>Digital Signature Certificate | Government Tender Filing | Online Services</p>
   <p style="margin-top:5px;">📍 4 STAR MOBILE, Mahaveer Marg, Kishanganj, Bihar</p>
   <p>📞 Call / WhatsApp: +91 9473371370</p>
   <p style="margin-top:20px;font-size:14px;">© 2026 DSC Kishanganj. All Rights Reserved.</p>
