@@ -29,7 +29,6 @@
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "DSC Kishanganj - Powered by 4 STAR MOBILE",
-  "image": "1000326249.png",
   "telephone": "+919473371370",
   "address": {
     "@type": "PostalAddress",
@@ -99,9 +98,8 @@ header{
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  object-fit: cover;
   background: #fff;
-  padding: 3px;
+  padding: 2px;
   border: 2px solid #ffd700;
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
@@ -112,7 +110,7 @@ header{
 }
 
 .logo{
-  font-size:24px;
+  font-size:22px;
   font-weight:800;
   line-height: 1.1;
   letter-spacing: 0.5px;
@@ -125,7 +123,7 @@ header{
   background: linear-gradient(90deg, #ffcc00, #ff9900);
   color: #000;
   font-weight: 700;
-  padding: 2px 10px;
+  padding: 3px 10px;
   border-radius: 20px;
   display: inline-block;
   margin-top: 4px;
@@ -148,19 +146,19 @@ nav a:hover{
 }
 
 .hero{
-  background:linear-gradient(rgba(0,34,68,.8),rgba(0,34,68,.8)),url('file_000000002718820792205ff8022e0feb.png') center/cover;
+  background:linear-gradient(rgba(0,34,68,.85),rgba(0,34,68,.85));
   color:white;
   text-align:center;
   padding:90px 20px;
 }
 
 .hero h1{
-  font-size:46px;
+  font-size:42px;
   margin-bottom:15px;
 }
 
 .hero p{
-  font-size:19px;
+  font-size:18px;
   max-width:850px;
   margin:auto;
 }
@@ -218,7 +216,7 @@ nav a:hover{
 
 .section-title{
   text-align:center;
-  font-size:36px;
+  font-size:34px;
   color:#002244;
   margin-bottom:15px;
 }
@@ -315,10 +313,10 @@ footer{
     margin-top:5px;
   }
   .hero h1{
-    font-size:32px;
+    font-size:28px;
   }
   .hero p{
-    font-size:16px;
+    font-size:15px;
   }
 }
 </style>
@@ -328,8 +326,14 @@ footer{
 
 <header>
   <div class="logo-container">
-    <!-- Guaranteed Image displaying with fallback -->
-    <img src="1000326249.png" alt="4 Star Mobile Logo" class="logo-img" onerror="this.onerror=null; this.src='1000326249_2.png';">
+    <!-- SVG Built-in Logo (Always Loads Guaranteed) -->
+    <svg class="logo-img" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="250" cy="250" r="230" fill="#ffffff" stroke="#ffd700" stroke-width="12"/>
+      <path d="M 120 220 C 140 100, 360 80, 420 180 C 350 110, 180 120, 120 220 Z" fill="#d4af37"/>
+      <text x="130" y="310" font-family="'Poppins', sans-serif" font-weight="900" font-size="210" fill="#d4af37">4</text>
+      <polygon points="360,140 385,215 460,215 400,260 422,335 360,290 298,335 320,260 260,215 335,215" fill="#ffd700" stroke="#b38f00" stroke-width="4"/>
+      <path d="M 80 260 C 100 420, 380 430, 430 330 C 350 420, 140 390, 80 260 Z" fill="#111111"/>
+    </svg>
     <div class="logo-text">
       <div class="logo">DSC KISHANGANJ</div>
       <span class="sub-tagline">⚡ POWERED BY 4 STAR MOBILE</span>
@@ -393,13 +397,6 @@ footer{
     </div>
   </div>
 </section>
-
-<div class="container">
-  <div class="card" style="text-align:center;">
-    <img src="1000314406-removebg-preview.png" alt="Digital Signature USB Token Kishanganj" loading="lazy" style="max-width:100%; height:auto; border-radius:15px;">
-    <h3 style="margin-top:15px;">Digital Signature USB Token</h3>
-  </div>
-</div>
 
 <section class="container" id="about">
   <h2 class="section-title">About DSC Kishanganj</h2>
