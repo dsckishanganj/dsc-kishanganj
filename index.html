@@ -187,22 +187,25 @@ nav a:hover{color:#ffd54f;}
 }
 .receipt-box h4 { color: #002244; border-bottom: 2px solid #eee; padding-bottom: 8px; margin-bottom: 12px; text-align: center;}
 
-/* PRINT STYLES - Sirf Ek Page Par Clean Print Hoga */
+/* PRINT STYLES - Fix for blank pages and clean receipt print */
 @media print {
   @page {
     size: auto;
     margin: 10mm;
   }
   body, html {
-    background: #fff !important;
-    height: 100% !important;
-    overflow: hidden !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    height: auto !important;
+    overflow: visible !important;
   }
   body * {
     visibility: hidden !important;
+    display: none !important;
   }
   #digital-receipt, #digital-receipt * {
     visibility: visible !important;
+    display: block !important;
   }
   #digital-receipt {
     position: absolute !important;
@@ -212,15 +215,16 @@ nav a:hover{color:#ffd54f;}
     max-width: 100% !important;
     border: 2px solid #002244 !important;
     box-shadow: none !important;
-    background: white !important;
+    background: #ffffff !important;
     margin: 0 !important;
     padding: 20px !important;
-    display: block !important;
     page-break-after: avoid !important;
     page-break-before: avoid !important;
     page-break-inside: avoid !important;
   }
-  .no-print {
+  #digital-receipt .no-print,
+  #digital-receipt button,
+  #digital-receipt a {
     display: none !important;
   }
 }
