@@ -107,51 +107,48 @@ nav a:hover{color:#ffd54f;}
 .card h3{color:#002244;margin-bottom:12px;}
 .card ul{padding-left:18px;}
 .box-style {text-align:center;background: #fff;padding: 30px;border-radius: 18px;box-shadow: 0 8px 20px rgba(0,0,0,.08);}
-.qr-code-img {max-width: 280px;width: 100%;height: auto;border: 2px dashed #002244;padding: 10px;border-radius: 12px;margin: 15px 0;background: #fff;}
+.qr-code-img {max-width: 250px;width: 100%;height: auto;border: 2px dashed #002244;padding: 10px;border-radius: 12px;margin: 15px 0;background: #fff;}
 .map-responsive{overflow:hidden;padding-bottom:56.25%;position:relative;height:0;border-radius:18px;box-shadow:0 8px 20px rgba(0,0,0,.08);margin-top:15px;}
 .map-responsive iframe{left:0;top:0;height:100%;width:100%;position:absolute;border:0;}
 
-/* Poster-Style Eye-Catching Review Section */
-.review-poster-box {
-  background: linear-gradient(135deg, #00152b, #003366);
-  color: #fff;
-  border-radius: 20px;
-  padding: 40px 30px;
+/* Poster-Style Google Review Mockup Section */
+.review-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+.review-phone-mockup {
+  background: linear-gradient(145deg, #00152b, #003366);
+  border: 3px solid #ffd700;
+  border-radius: 25px;
+  padding: 35px 25px;
   text-align: center;
+  color: #fff;
   box-shadow: 0 15px 35px rgba(0,34,68,0.25);
-  border: 2px solid #ffd700;
-  max-width: 800px;
-  margin: auto;
+  position: relative;
 }
-.poster-stars {
+.mockup-google-title {
   font-size: 32px;
-  color: #ffd700;
-  letter-spacing: 5px;
-  margin-bottom: 10px;
-  text-shadow: 0 2px 8px rgba(255,215,0,0.5);
-}
-.poster-heading {
-  font-size: 28px;
   font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
 }
-.poster-subtext {
-  font-size: 16px;
-  color: #e0e6ed;
-  max-width: 600px;
-  margin: 0 auto 25px auto;
-}
-.review-highlight-card {
-  background: #ffffff;
-  color: #222;
-  padding: 25px;
-  border-radius: 15px;
-  margin: 20px auto;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  text-align: left;
+.mockup-google-title span.g-blue { color: #4285F4; }
+.mockup-google-title span.g-red { color: #EA4335; }
+.mockup-google-title span.g-yellow { color: #FBBC05; }
+.mockup-google-title span.g-green { color: #34A853; }
+
+.review-badge-floating {
+  display: inline-block;
+  background: linear-gradient(135deg, #ffc107, #ff9800);
+  color: #000;
+  font-weight: 800;
+  padding: 6px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  box-shadow: 0 5px 15px rgba(255,152,0,0.4);
 }
 
 footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin-top:60px;}
@@ -164,7 +161,7 @@ footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin
   .hero p{font-size:14px;}
   .token-card{width:110px;}
   .token-card img{height:90px;}
-  .poster-heading {font-size: 22px;}
+  .review-main-grid {grid-template-columns: 1fr;}
 }
 </style>
 </head>
@@ -372,25 +369,39 @@ footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin
   </div>
 </section>
 
-<!-- Poster Style Eye-Catching Review Section -->
+<!-- Poster Style Google Review Section -->
 <section class="container" id="reviews">
-  <div class="review-poster-box">
-    <div class="poster-stars">⭐⭐⭐⭐⭐</div>
-    <h2 class="poster-heading">Support DSC Kishanganj</h2>
-    <p style="font-size: 14px; color: #ffd700; font-weight: 600; margin-bottom: 15px;">POWERED BY 4 STAR MOBILE</p>
+  <div class="review-main-grid">
     
-    <p class="poster-subtext">If you're happy with our service, please give us a 5-Star Google Rating and a short review. Your review helps others and motivates us to do even better!</p>
-    
-    <div class="box-style" style="max-width:420px; margin:20px auto; color:#222;">
-      <h3 style="color:#ea4335; margin-bottom: 5px;">Scan to Review</h3>
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=https://tinyurl.com/Dscknepower-by-4-star-mobile" alt="Direct Google Review QR Code" class="qr-code-img" style="border-color:#ea4335; margin: 10px 0;">
-      <p style="font-size:13px; color:#555; margin-bottom:15px;">Click the button below or scan QR code via mobile camera:</p>
-      <a class="btn review-btn" href="https://tinyurl.com/Dscknepower-by-4-star-mobile" target="_blank" style="display:block; width:100%; padding: 12px 20px;">
-        ⭐ Click Here to Leave a Review
-      </a>
+    <!-- Left Side: Google Review Phone Mockup Style Box -->
+    <div class="review-phone-mockup">
+      <div class="review-badge-floating">⭐ 5 STAR RATING</div>
+      <h2 class="mockup-google-title">
+        <span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue">g</span><span class="g-green">l</span><span class="g-red">e</span> Reviews
+      </h2>
+      <div style="font-size: 28px; color: #ffc107; letter-spacing: 4px; margin: 15px 0;">⭐⭐⭐⭐⭐</div>
+      <p style="font-size: 15px; color: #e0e6ed; margin-bottom: 20px; line-height: 1.6;">
+        "Your review helps others and motivates us to do even better!"
+      </p>
+      <div style="background: rgba(255,255,255,0.1); padding: 15px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2);">
+        <p style="font-size: 14px; font-weight: 600; color: #ffd700;">DSC KISHANGANJ</p>
+        <p style="font-size: 12px; color: #ccc;">Powered by 4 Star Mobile</p>
+      </div>
     </div>
 
-    <p style="font-size:14px; margin-top:20px; color:#ffcc00; font-weight:600;">🙏 Thank you for your trust and support!</p>
+    <!-- Right Side: Action Box & QR Code -->
+    <div class="box-style" style="text-align: center;">
+      <h3 style="color:#ea4335; margin-bottom: 5px;">We Value Your Feedback!</h3>
+      <p style="font-size: 13px; color: #666; margin-bottom: 10px;">Scan QR or click below to give your 5-star rating:</p>
+      
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=https://tinyurl.com/Dscknepower-by-4-star-mobile" alt="Google Review QR Code" class="qr-code-img" style="border-color:#ea4335;">
+
+      <a class="btn review-btn" href="https://tinyurl.com/Dscknepower-by-4-star-mobile" target="_blank" style="display:block; width:100%; margin-top: 10px;">
+        ⭐ Click Here to Leave a Review
+      </a>
+      <p style="font-size:13px; margin-top:12px; color:#2e7d32; font-weight:600;">🙏 Thank you for your trust and support!</p>
+    </div>
+
   </div>
 </section>
 
