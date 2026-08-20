@@ -288,8 +288,9 @@ footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin
     <h2 style="color:green;margin-top:10px;">Total : ₹ <span id="total">0</span></h2>
 
     <br>
+    <!-- Direct 1-Click Pay Buttons for Mobile Users -->
     <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px;">
-      <button type="button" onclick="handleDirectPay()" class="btn pay-btn" style="margin:0; border:none; cursor:pointer;">⚡ Generate QR & Pay ₹<span id="calc-amt-phonepe">0</span> Securely</button>
+      <a id="direct-pay-btn" href="#" class="btn" style="background:#5f259f; color:white; margin:0; text-align:center; display:block;">⚡ Pay ₹<span id="calc-amt-phonepe">0</span> Directly via UPI App (PhonePe/GPay/Paytm)</a>
     </div>
 
     <!-- Automated Digital Receipt Section -->
@@ -297,17 +298,10 @@ footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin
       <h4>🧾 4 STAR MOBILE - PAYMENT RECEIPT</h4>
       <p><strong>Service:</strong> Digital Signature Certificate (DSC)</p>
       <p><strong>Total Amount:</strong> ₹<span id="receipt-total-amt">0</span></p>
-      <p><strong>Status:</strong> <span style="color:#e65100; font-weight:bold;">Scan & Pay Below</span></p>
+      <p><strong>Status:</strong> <span style="color:#25D366; font-weight:bold;">Payment Link Generated</span></p>
       <p><strong>Date:</strong> <span id="receipt-date"></span></p>
-      
-      <div style="text-align:center; margin: 15px 0;">
-        <p style="font-size:13px; color:#555; margin-bottom:8px;">Scan this QR using PhonePe / GPay / Paytm (Amount Auto-Filled):</p>
-        <img id="dynamic-qr" src="" alt="Scan & Pay QR" style="width:200px; height:200px; border:2px solid #002244; padding:5px; border-radius:10px; display:inline-block;">
-        <p style="font-size:16px; margin-top:10px; font-weight:bold; color:#5f259f;">UPI ID: abdulwahidnizami1@ybl</p>
-        <button type="button" onclick="copyUpiId()" style="background:#002244; color:white; border:none; padding:8px 16px; border-radius:20px; font-size:13px; margin-top:5px; cursor:pointer;">📋 Copy UPI ID</button>
-      </div>
 
-      <div style="display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap;">
+      <div style="display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap;">
         <a id="receipt-wa-btn" class="btn whatsapp no-print" href="https://wa.me/919473371370" target="_blank" style="flex:1; margin:0; padding:10px;">📲 Send Screenshot</a>
         <button type="button" class="btn no-print" style="background:#333; flex:1; margin:0; padding:10px; color:white; border:none; cursor:pointer; border-radius:50px;" onclick="window.print()">🖨️ Print Receipt</button>
       </div>
@@ -331,10 +325,14 @@ footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin
 
 <section class="container" id="payment">
   <h2 class="section-title">💳 Instant UPI Payment</h2>
-  <p class="section-sub">Scan & Pay using PhonePe, Google Pay, Paytm, or BHIM UPI</p>
+  <p class="section-sub">Click below to pay directly or Scan & Pay using any UPI App</p>
   <div class="box-style" style="max-width:500px; margin:auto;">
     <h3>Bank Of Baroda - 4269</h3>
     <p style="color:#5f259f; font-size:18px; margin-top:5px;"><strong>UPI ID: abdulwahidnizami1@ybl</strong></p>
+
+    <div style="margin: 20px 0;">
+      <a id="section-pay-btn" href="upi://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=0&cu=INR" class="btn" style="background:#5f259f; color:white; display:block;">📱 Click to Pay via PhonePe / GPay / Paytm</a>
+    </div>
 
     <img src="https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=upi://pay?pa=abdulwahidnizami1@ybl&pn=Bank%20Of%20Baroda" alt="Bank Of Baroda QR Code" class="qr-code-img" style="border-color:#5f259f;">
 
@@ -392,7 +390,7 @@ footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin
 
 <footer>
   <h3>DSC KISHANGANJ</h3>
-  <div class="sub-tagline" style="margin: 8px auto 15px auto;">⚡ POWERED BY 4 STAR MOBILE</div>
+  <div class="sub-tagline" style="margin: 8px auto 15px auto;">⚡ POWERED BY 4 STARMOBILE</div>
   <p>Digital Signature Certificate | Government Tender Filing | Online Services</p>
   <p style="margin-top:20px;font-size:14px;">© 2026 DSC Kishanganj. All Rights Reserved.</p>
 </footer>
@@ -414,41 +412,32 @@ function calculatePrice(){
   document.getElementById("total").innerText = total;
 
   document.getElementById("calc-amt-phonepe").innerText = total;
+
+  // Universal direct UPI intent link with auto amount
+  let upiString = `upi://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=${total}&cu=INR`;
+  
+  document.getElementById("direct-pay-btn").href = upiString;
+  document.getElementById("section-pay-btn").href = upiString;
 }
 
-function handleDirectPay(){
+// When user clicks direct pay button, show digital receipt and auto review prompt
+document.getElementById("direct-pay-btn").addEventListener("click", function(e) {
   let total = document.getElementById("total").innerText;
   if(Number(total) <= 0) {
+    e.preventDefault();
     alert("Please select a certificate first!");
     return;
   }
 
   document.getElementById("receipt-total-amt").innerText = total;
   document.getElementById("receipt-date").innerText = new Date().toLocaleDateString();
-  
-  // Standard UPI String with amount embedded so scanning auto-fills the price correctly
-  let upiString = `upi://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=${total}&cu=INR`;
-  
-  // Generate dynamic QR code safely via public API
-  document.getElementById("dynamic-qr").src = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=` + encodeURIComponent(upiString);
 
-  let receiptMsg = `Hello, I want to pay ₹${total} for DSC at 4 Star Mobile. Here is my payment screenshot:`;
+  let receiptMsg = `Hello, I have initiated a payment of ₹${total} for DSC at 4 Star Mobile. Here is my payment screenshot:`;
   document.getElementById("receipt-wa-btn").href = "https://wa.me/919473371370?text=" + encodeURIComponent(receiptMsg);
 
   document.getElementById("digital-receipt").style.display = "block";
   document.getElementById("auto-review-section").style.display = "block";
-
-  // Smooth scroll down to QR receipt section so customer can easily scan
-  document.getElementById("digital-receipt").scrollIntoView({ behavior: 'smooth' });
-}
-
-function copyUpiId() {
-  navigator.clipboard.writeText("abdulwahidnizami1@ybl").then(() => {
-    alert("UPI ID copied to clipboard: abdulwahidnizami1@ybl");
-  }).catch(err => {
-    console.error('Failed to copy: ', err);
-  });
-}
+});
 </script>
 
 </body>
