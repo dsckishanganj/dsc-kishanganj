@@ -289,9 +289,7 @@ footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin
 
     <br>
     <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 15px;">
-      <button type="button" onclick="handleDirectPay('phonepe')" class="btn" style="background:#5f259f; color:white; margin:0; border:none; cursor:pointer;">⚡ Direct Pay ₹<span id="calc-amt-phonepe">0</span> with PhonePe</button>
-      <button type="button" onclick="handleDirectPay('gpay')" class="btn" style="background:#4285f4; color:white; margin:0; border:none; cursor:pointer;">⚡ Direct Pay ₹<span id="calc-amt-gpay">0</span> with Google Pay</button>
-      <button type="button" onclick="handleDirectPay('paytm')" class="btn" style="background:#00baf2; color:white; margin:0; border:none; cursor:pointer;">⚡ Direct Pay ₹<span id="calc-amt-paytm">0</span> with Paytm</button>
+      <button type="button" onclick="handleDirectPay()" class="btn pay-btn" style="margin:0; border:none; cursor:pointer;">⚡ Pay ₹<span id="calc-amt-phonepe">0</span> Securely via UPI / QR Code</button>
     </div>
 
     <!-- Automated Digital Receipt Section -->
@@ -299,9 +297,18 @@ footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin
       <h4>🧾 4 STAR MOBILE - PAYMENT RECEIPT</h4>
       <p><strong>Service:</strong> Digital Signature Certificate (DSC)</p>
       <p><strong>Total Amount:</strong> ₹<span id="receipt-total-amt">0</span></p>
-      <p><strong>Status:</strong> <span style="color:#e65100; font-weight:bold;">Payment Link Opened</span></p>
+      <p><strong>Status:</strong> <span style="color:#e65100; font-weight:bold;">Ready for Payment</span></p>
       <p><strong>Date:</strong> <span id="receipt-date"></span></p>
       
+      <div style="text-align:center; margin: 15px 0;">
+        <p style="font-size:13px; color:#555; margin-bottom:8px;">Scan this QR using PhonePe / GPay / Paytm (Amount Auto-Filled):</p>
+        <img id="dynamic-qr" src="" alt="Scan & Pay QR" style="width:200px; height:200px; border:2px solid #002244; padding:5px; border-radius:10px; display:inline-block;">
+        <p style="font-size:15px; margin-top:8px; font-weight:bold; color:#5f259f;">UPI ID: abdulwahidnizami1@ybl</p>
+        <div style="margin-top: 10px;">
+          <a id="universal-upi-link" href="#" class="btn" style="background:#5f259f; color:white; padding:10px 20px; font-size:14px; display:inline-block;">📱 Click to Pay via PhonePe / GPay App</a>
+        </div>
+      </div>
+
       <div style="display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap;">
         <a id="receipt-wa-btn" class="btn whatsapp no-print" href="https://wa.me/919473371370" target="_blank" style="flex:1; margin:0; padding:10px;">📲 Send Screenshot</a>
         <button type="button" class="btn no-print" style="background:#333; flex:1; margin:0; padding:10px; color:white; border:none; cursor:pointer; border-radius:50px;" onclick="window.print()">🖨️ Print Receipt</button>
@@ -332,9 +339,7 @@ footer{background:#00152b;color:white;text-align:center;padding:35px 20px;margin
     <p style="color:#5f259f; font-size:18px; margin-top:5px;"><strong>UPI ID: abdulwahidnizami1@ybl</strong></p>
 
     <div style="display: flex; flex-direction: column; gap: 10px; margin: 20px 0;">
-      <a id="pay-phonepe" href="phonepe://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=0&cu=INR" class="btn" style="background:#5f259f; color:white;">Pay ₹<span id="pay-amt-phonepe">0</span> with PhonePe</a>
-      <a id="pay-gpay" href="gpay://upi/pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=0&cu=INR" class="btn" style="background:#4285f4; color:white;">Pay ₹<span id="pay-amt-gpay">0</span> with Google Pay</a>
-      <a id="pay-paytm" href="paytmmp://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=0&cu=INR" class="btn" style="background:#00baf2; color:white;">Pay ₹<span id="pay-amt-paytm">0</span> with Paytm</a>
+      <a id="pay-phonepe" href="upi://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=0&cu=INR" class="btn" style="background:#5f259f; color:white;">Pay via UPI App (PhonePe/GPay/Paytm)</a>
     </div>
 
     <img src="https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=upi://pay?pa=abdulwahidnizami1@ybl&pn=Bank%20Of%20Baroda" alt="Bank Of Baroda QR Code" class="qr-code-img" style="border-color:#5f259f;">
@@ -415,19 +420,12 @@ function calculatePrice(){
   document.getElementById("total").innerText = total;
 
   document.getElementById("calc-amt-phonepe").innerText = total;
-  document.getElementById("calc-amt-gpay").innerText = total;
-  document.getElementById("calc-amt-paytm").innerText = total;
 
-  document.getElementById("pay-amt-phonepe").innerText = total;
-  document.getElementById("pay-amt-gpay").innerText = total;
-  document.getElementById("pay-amt-paytm").innerText = total;
-
-  document.getElementById("pay-phonepe").href = `phonepe://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=${total}&cu=INR`;
-  document.getElementById("pay-gpay").href = `gpay://upi/pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=${total}&cu=INR`;
-  document.getElementById("pay-paytm").href = `paytmmp://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=${total}&cu=INR`;
+  let upiString = `upi://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=${total}&cu=INR`;
+  document.getElementById("pay-phonepe").href = upiString;
 }
 
-function handleDirectPay(appType){
+function handleDirectPay(){
   let total = document.getElementById("total").innerText;
   if(Number(total) <= 0) {
     alert("Please select a certificate first!");
@@ -437,22 +435,22 @@ function handleDirectPay(appType){
   document.getElementById("receipt-total-amt").innerText = total;
   document.getElementById("receipt-date").innerText = new Date().toLocaleDateString();
   
-  let receiptMsg = `Hello, I have initiated a payment of ₹${total} for DSC at 4 Star Mobile. Here is my payment screenshot:`;
+  let upiString = `upi://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=${total}&cu=INR`;
+  
+  // Generate dynamic QR code with exact amount
+  document.getElementById("dynamic-qr").src = `https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=` + encodeURIComponent(upiString);
+  
+  // Set universal click-to-pay link for phonepe/gpay/paytm
+  document.getElementById("universal-upi-link").href = upiString;
+
+  let receiptMsg = `Hello, I want to pay ₹${total} for DSC at 4 Star Mobile. Here is my payment screenshot:`;
   document.getElementById("receipt-wa-btn").href = "https://wa.me/919473371370?text=" + encodeURIComponent(receiptMsg);
 
   document.getElementById("digital-receipt").style.display = "block";
   document.getElementById("auto-review-section").style.display = "block";
 
-  let upiLink = "";
-  if(appType === 'phonepe'){
-    upiLink = `phonepe://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=${total}&cu=INR`;
-  } else if(appType === 'gpay'){
-    upiLink = `gpay://upi/pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=${total}&cu=INR`;
-  } else if(appType === 'paytm'){
-    upiLink = `paytmmp://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=${total}&cu=INR`;
-  }
-
-  window.location.href = upiLink;
+  // Smooth scroll to receipt/QR section
+  document.getElementById("digital-receipt").scrollIntoView({ behavior: 'smooth' });
 }
 </script>
 
