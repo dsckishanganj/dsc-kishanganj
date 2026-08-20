@@ -588,12 +588,10 @@ function calculatePrice(){
   document.getElementById("gst").innerText = gst;
   document.getElementById("total").innerText = total;
 
-  // Update Calculator Section Amount Text
   document.getElementById("calc-amt-phonepe").innerText = total;
   document.getElementById("calc-amt-gpay").innerText = total;
   document.getElementById("calc-amt-paytm").innerText = total;
 
-  // Update Payment Section Buttons (Bottom Section)
   document.getElementById("pay-amt-phonepe").innerText = total;
   document.getElementById("pay-amt-gpay").innerText = total;
   document.getElementById("pay-amt-paytm").innerText = total;
@@ -607,7 +605,6 @@ function calculatePrice(){
   document.getElementById("apply").href = "https://wa.me/919473371370?text=" + encodeURIComponent(msg);
 }
 
-// Function to handle Direct Pay clicks safely without breaking receipt generation
 function handleDirectPay(appType){
   let total = document.getElementById("total").innerText;
   if(Number(total) <= 0) {
@@ -615,7 +612,6 @@ function handleDirectPay(appType){
     return;
   }
 
-  // 1. Generate and display receipt & review section on screen
   document.getElementById("receipt-total-amt").innerText = total;
   document.getElementById("receipt-date").innerText = new Date().toLocaleDateString();
   
@@ -625,7 +621,6 @@ function handleDirectPay(appType){
   document.getElementById("digital-receipt").style.display = "block";
   document.getElementById("auto-review-section").style.display = "block";
 
-  // 2. Build the appropriate UPI link
   let upiLink = "";
   if(appType === 'phonepe'){
     upiLink = `phonepe://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=${total}&cu=INR`;
@@ -635,7 +630,6 @@ function handleDirectPay(appType){
     upiLink = `paytmmp://pay?pa=abdulwahidnizami1@ybl&pn=Abdul%20Wahid&am=${total}&cu=INR`;
   }
 
-  // 3. Open UPI App after a short delay so the receipt renders properly first
   setTimeout(function() {
     window.location.href = upiLink;
   }, 300);
