@@ -1,15 +1,14 @@
-Aapke bheje hue screenshots ke hisab se humne poori website ka structure, design layout (Blue Hero Header, Pills/Badges, Images placement, Pricing Cards, Benefit Bullets, 1M+ Stats section) exact Digi Infra India jaisa bana diya hai.
-Google Ads policy ko dhyan mein rakhte hue text mein "Authorized Partner / Private Consultancy" clear rakha gaya hai taaki Government Misrepresentation ki wajah se ad suspend na ho.
-Ye raha aapka 100% Matching HTML Code. Isse copy karke apni .html file mein paste kar dein:
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>DSC Kishanganj | 4 Star Mobile - Digital Signature Certificate Provider</title>
-<meta name="description" content="Call 9473371370: Get Class 3 Digital Signature Certificate (DSC) in minutes with 4 Star Mobile Kishanganj. Secure, paperless, and compliant DSC solutions across India.">
-<meta name="keywords" content="DSC Kishanganj, Digital Signature Certificate Kishanganj, Class 3 DSC, 4 Star Mobile, DGFT DSC, Tender DSC, Document Signer Certificate">
+<title>DSC Kishanganj | 4 Star Mobile - India's Trusted Digital Signature Center</title>
+<meta name="description" content="Call 9473371370: Class 3 Digital Signature Certificate (DSC) & USB Crypto Tokens in Kishanganj at 4 STAR MOBILE. Paperless support for Individual, Organization, DGFT, Document Signer & Renewal DSC.">
+<meta name="keywords" content="DSC Kishanganj, Digital Signature Certificate Kishanganj, Class 3 DSC, 4 Star Mobile, DGFT DSC, Tender DSC, Document Signer Certificate, HYP2003, ProxKey, mToken">
+<meta name="author" content="4 Star Mobile - DSC Kishanganj">
+<meta name="robots" content="index, follow">
 
 <!-- Favicon -->
 <link rel="icon" type="image/jpeg" href="https://dsckishanganj.github.io/dsc-kishanganj/Screenshot_20260819-232720_Chrome.png">
@@ -20,7 +19,7 @@ Ye raha aapka 100% Matching HTML Code. Isse copy karke apni .html file mein past
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;scroll-behavior:smooth;}
 body{background:#f8fafc;color:#0f172a;line-height:1.6;}
 
 /* Header */
@@ -31,7 +30,8 @@ header{background:#ffffff;padding:14px 6%;display:flex;justify-content:space-bet
 .logo{font-size:20px;font-weight:800;color: #1e3a8a;letter-spacing:-0.5px;}
 .sub-tagline {font-size: 10px;background: #eff6ff;color: #2563eb;font-weight: 700;padding: 2px 8px;border-radius: 20px;display: inline-block;margin-top: 2px;border: 1px solid #bfdbfe;}
 
-nav a{color:#334155;text-decoration:none;margin-left:18px;font-weight:600;font-size:14px;transition:.3s;}
+nav{display:flex; gap:14px; flex-wrap:wrap;}
+nav a{color:#334155;text-decoration:none;font-weight:600;font-size:13.5px;transition:.3s;}
 nav a:hover{color:#2563eb;}
 
 /* Hero Section */
@@ -58,34 +58,59 @@ nav a:hover{color:#2563eb;}
 .trust-card {background: #fff; padding: 18px; border-radius: 12px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);}
 .trust-icon {width: 42px; height: 42px; background: #eff6ff; color: #2563eb; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800;}
 
-/* Banner Image Block */
-.banner-img-box {border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.08); margin: 30px 0;}
-.banner-img-box img {width: 100%; display: block; object-fit: cover;}
-
 /* Solutions Cards */
-.solution-card {background: #fff; border-radius: 18px; border: 1px solid #e2e8f0; padding: 25px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);}
-.solution-card h3 {font-size: 20px; color: #0f172a; margin-bottom: 8px; font-weight: 700;}
-.solution-card p {font-size: 13.5px; color: #64748b; margin-bottom: 15px;}
+.solution-card {background: #fff; border-radius: 18px; border: 1px solid #e2e8f0; padding: 28px; margin-bottom: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.03);}
+.solution-card h3 {font-size: 22px; color: #0f172a; margin-bottom: 8px; font-weight: 700;}
+.solution-card p {font-size: 14px; color: #64748b; margin-bottom: 15px;}
 
 .tags-flex {display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px;}
-.tag-badge {background: #f1f5f9; color: #334155; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600;}
+.tag-badge {background: #eff6ff; color: #2563eb; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; border:1px solid #bfdbfe;}
 
-.check-list {list-style: none; padding: 0; margin-bottom: 15px;}
-.check-list li {font-size: 13.5px; color: #334155; margin-bottom: 6px; display: flex; align-items: center; gap: 8px;}
-.check-list li::before {content: "✔"; color: #2563eb; font-weight: 800;}
+.check-grid {display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap:10px; margin: 15px 0;}
+.check-item {font-size: 13.5px; color: #334155; display: flex; align-items: center; gap: 8px;}
+.check-item::before {content: "✔"; color: #2563eb; font-weight: 800;}
 
 /* Stats Block */
 .stats-grid {display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; background: #fff; border-radius: 16px; padding: 25px; border: 1px solid #e2e8f0; text-align: center; margin: 30px 0;}
 .stat-number {font-size: 26px; font-weight: 800; color: #2563eb;}
 .stat-label {font-size: 12px; color: #64748b; font-weight: 600;}
 
+/* Process Steps Grid */
+.steps-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; margin-top: 25px;}
+.step-card {background: #fff; padding: 22px; border-radius: 16px; border: 1px solid #e2e8f0; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.03);}
+.step-number {width: 40px; height: 40px; background: #2563eb; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; margin: 0 auto 12px auto;}
+
 /* Pricing Section */
-.price-card {background: #fff; border-radius: 16px; border: 1px solid #e2e8f0; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.04);}
+.price-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;}
+.price-card {background: #fff; border-radius: 16px; border: 1px solid #e2e8f0; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.04); position:relative;}
 .price-card h3 {font-size: 18px; color: #0f172a;}
 .price-amount {font-size: 28px; font-weight: 800; color: #2563eb; margin: 10px 0 15px 0;}
 .price-amount span {font-size: 13px; color: #64748b; font-weight: 500;}
 
 .btn-blue {display: block; width: 100%; background: #2563eb; color: #fff; text-align: center; padding: 12px; border-radius: 10px; font-weight: 700; text-decoration: none; margin-top: 15px;}
+
+/* Use Case Grid */
+.usecase-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px;}
+.usecase-box-item {background: #fff; padding: 15px; border-radius: 12px; border: 1px solid #e2e8f0; font-size: 13.5px; font-weight: 600; color: #0f172a; text-align: center;}
+
+/* FAQ Accordion */
+.faq-item {background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; padding: 18px; margin-bottom: 12px;}
+.faq-item h4 {font-size: 15px; color: #0f172a; margin-bottom: 6px;}
+.faq-item p {font-size: 13px; color: #64748b;}
+
+/* Review Box */
+.mega-review-card {max-width: 600px; margin: auto; background: linear-gradient(145deg, #00152b, #003366); border: 2px solid #ffd700; border-radius: 20px; padding: 35px 25px; text-align: center; color: #fff;}
+.mockup-google-title {font-size: 28px; font-weight: 800; margin-bottom: 5px;}
+.mockup-google-title span.g-blue { color: #4285F4; }
+.mockup-google-title span.g-red { color: #EA4335; }
+.mockup-google-title span.g-yellow { color: #FBBC05; }
+.mockup-google-title span.g-blue2 { color: #4285F4; }
+.mockup-google-title span.g-green { color: #34A853; }
+.mockup-google-title span.g-red2 { color: #EA4335; }
+
+.review-badge-floating {display: inline-block; background: linear-gradient(135deg, #ffc107, #ff9800); color: #000; font-weight: 800; padding: 4px 16px; border-radius: 20px; font-size: 12px; margin-bottom: 12px;}
+.mega-qr-box {background: #ffffff; padding: 12px; border-radius: 14px; display: inline-block; margin: 15px 0;}
+.mega-qr-box img {width: 180px; height: 180px; display: block;}
 
 /* Disclaimer Box */
 .disclaimer-box {background: #fffbe3; border: 2px solid #f59e0b; border-radius: 12px; padding: 18px; margin: 30px auto; max-width: 1000px; font-size: 13px; color: #334155; text-align: center;}
@@ -96,6 +121,7 @@ footer a{color:#ffd700;text-decoration:none;margin:0 8px;font-size:12px;}
 @media(max-width:768px){
   header{flex-direction:column; text-align:center;}
   .logo-container{margin-bottom:10px;}
+  nav{justify-content:center; gap:8px;}
   .hero h1{font-size:24px;}
   .stats-grid{grid-template-columns: 1fr;}
 }
@@ -104,6 +130,7 @@ footer a{color:#ffd700;text-decoration:none;margin:0 8px;font-size:12px;}
 
 <body>
 
+<!-- PAGE 1: HEADER & NAVIGATION -->
 <header>
   <div class="logo-container">
     <img src="IMG-20260803-WA0077.jpg" alt="DSC Kishanganj Logo" class="logo-img">
@@ -114,14 +141,23 @@ footer a{color:#ffd700;text-decoration:none;margin:0 8px;font-size:12px;}
   </div>
   <nav>
     <a href="#">Home</a>
-    <a href="#solutions">Solutions</a>
+    <a href="#about">About</a>
+    <a href="#individual">Individual</a>
+    <a href="#organization">Organization</a>
+    <a href="#dgft">DGFT</a>
+    <a href="#foreign">Foreign DSC</a>
+    <a href="#signer">Doc Signer</a>
     <a href="#tokens">USB Tokens</a>
+    <a href="#process">Process</a>
     <a href="#pricing">Pricing</a>
+    <a href="#estimator">Estimator</a>
+    <a href="#usecases">Uses</a>
+    <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<!-- HERO SECTION (Matches Digi Infra Layout) -->
+<!-- PAGE 2: HERO BANNER SECTION -->
 <section class="hero">
   <div class="pill-badge">Trusted Across India</div>
   <h1>India's Trusted Digital Signature Certificate (DSC) Partner</h1>
@@ -142,7 +178,7 @@ footer a{color:#ffd700;text-decoration:none;margin:0 8px;font-size:12px;}
   </div>
 </section>
 
-<!-- TRUST & VERIFICATION CARDS -->
+<!-- PAGE 3: TRUST & VERIFICATION PILLARS -->
 <section class="container">
   <div class="trust-grid">
     <div class="trust-card">
@@ -174,22 +210,17 @@ footer a{color:#ffd700;text-decoration:none;margin:0 8px;font-size:12px;}
       </div>
     </div>
   </div>
+</section>
 
-  <!-- ABOUT / HARDWARE TOKEN IMAGE SECTION -->
-  <div class="solution-card" id="tokens" style="margin-top:30px;">
+<!-- PAGE 4: ABOUT & STATS METRICS -->
+<section class="container" id="about" style="padding-top:0;">
+  <div class="solution-card">
     <div style="text-align:center;">
       <span style="background:#eff6ff; color:#2563eb; font-weight:700; font-size:11px; padding:4px 12px; border-radius:20px; text-transform:uppercase;">ABOUT 4 STAR MOBILE</span>
       <h2 style="font-size:24px; color:#0f172a; margin:10px 0;">Your Trusted Partner for Digital Signature Certificates in India</h2>
       <p>We are an Authorized Partner, helping individuals, professionals, businesses, startups, and organizations obtain secure Digital Signature Certificates quickly and easily.</p>
     </div>
 
-    <!-- USB TOKEN IMAGE PLACEHOLDER -->
-    <div style="text-align:center; margin:20px 0;">
-      <img src="https://img.icons8.com/color/144/usb-memory-stick.png" alt="USB Tokens" style="max-width:180px;">
-      <div style="font-weight:700; color:#2563eb; margin-top:8px;">FIPS-Compliant USB Crypto Tokens (HYP2003 / ProxKey / mToken)</div>
-    </div>
-
-    <!-- STATS -->
     <div class="stats-grid">
       <div>
         <div class="stat-number">10K+</div>
@@ -207,23 +238,21 @@ footer a{color:#ffd700;text-decoration:none;margin:0 8px;font-size:12px;}
   </div>
 </section>
 
-<!-- SOLUTIONS SECTION -->
-<section class="container" id="solutions" style="padding-top:0;">
-  <h2 class="sec-title">Digital Signature Certificate Solutions for Every Need</h2>
-  <p class="sec-sub">From Individual DSC to Enterprise Document Signing, we provide secure solutions across India.</p>
-
-  <!-- Individual DSC -->
+<!-- PAGE 5: INDIVIDUAL DIGITAL SIGNATURE CERTIFICATE -->
+<section class="container" id="individual" style="padding-top:0;">
   <div class="solution-card">
     <h3>Individual Digital Signature Certificate</h3>
-    <p>Secure Digital Signature Certificate for Indian citizens, professionals, and directors.</p>
+    <p>Secure Digital Signature Certificate for Indian citizens, professionals, tax filers, and business owners.</p>
     
-    <ul class="check-list">
-      <li>Income Tax Filing</li>
-      <li>GST Filing</li>
-      <li>MCA Filing</li>
-      <li>EPFO Portal</li>
-      <li>Trademark & eSign Documents</li>
-    </ul>
+    <strong style="font-size:14px; color:#0f172a; display:block; margin-top:15px;">Suitable For:</strong>
+    <div class="check-grid">
+      <div class="check-item">Income Tax Filing</div>
+      <div class="check-item">GST Return Filing</div>
+      <div class="check-item">MCA / ROC Filings</div>
+      <div class="check-item">EPFO Portal</div>
+      <div class="check-item">Trademark Filings</div>
+      <div class="check-item">eSign Documents</div>
+    </div>
 
     <div class="tags-flex">
       <span class="tag-badge">Aadhaar OTP Verification</span>
@@ -232,17 +261,23 @@ footer a{color:#ffd700;text-decoration:none;margin:0 8px;font-size:12px;}
       <span class="tag-badge">Technical Support</span>
     </div>
   </div>
+</section>
 
-  <!-- Organization DSC -->
+<!-- PAGE 6: ORGANIZATION DIGITAL SIGNATURE CERTIFICATE -->
+<section class="container" id="organization" style="padding-top:0;">
   <div class="solution-card">
     <h3>Organization Digital Signature Certificate</h3>
-    <p>Digital Signature Certificate issued in the organization's name for authorized employees and signatories.</p>
-    
-    <ul class="check-list">
-      <li>e-Tendering & GeM Bidding</li>
-      <li>Enterprise Tax Compliance</li>
-      <li>Corporate Board Approvals</li>
-    </ul>
+    <p>Digital Signature Certificate issued in the organization's name for authorized employees, directors, and company signatories.</p>
+
+    <strong style="font-size:14px; color:#0f172a; display:block; margin-top:15px;">Best For:</strong>
+    <div class="check-grid">
+      <div class="check-item">e-Procurement & Tenders</div>
+      <div class="check-item">GeM Portal Bidding</div>
+      <div class="check-item">Corporate Tax Compliance</div>
+      <div class="check-item">Board Approvals</div>
+      <div class="check-item">Company Directors</div>
+      <div class="check-item">Authorized Signatories</div>
+    </div>
 
     <div class="tags-flex">
       <span class="tag-badge">Organization Verification</span>
@@ -250,16 +285,43 @@ footer a{color:#ffd700;text-decoration:none;margin:0 8px;font-size:12px;}
       <span class="tag-badge">High Security</span>
     </div>
   </div>
+</section>
 
-  <!-- Foreign National DSC -->
+<!-- PAGE 7: DGFT IMPORT-EXPORT DSC -->
+<section class="container" id="dgft" style="padding-top:0;">
+  <div class="solution-card">
+    <h3>DGFT Digital Signature Certificate</h3>
+    <p>Specialized high-security Digital Signature for Exporters, Importers, and IEC code holders for seamless DGFT portal operations.</p>
+
+    <strong style="font-size:14px; color:#0f172a; display:block; margin-top:15px;">Suitable For:</strong>
+    <div class="check-grid">
+      <div class="check-item">Import & Export Firms</div>
+      <div class="check-item">IEC Registration</div>
+      <div class="check-item">DGFT License Applications</div>
+      <div class="check-item">Customs Clearance</div>
+    </div>
+
+    <div class="tags-flex">
+      <span class="tag-badge">DGFT Compatible</span>
+      <span class="tag-badge">Multi-Year Validity</span>
+      <span class="tag-badge">Dedicated Support</span>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 8: FOREIGN NATIONAL & NRI DSC -->
+<section class="container" id="foreign" style="padding-top:0;">
   <div class="solution-card">
     <h3>Foreign National Digital Signature Certificate</h3>
-    <p>Secure Digital Signature solution for foreign citizens and international organizations doing business in India.</p>
+    <p>Secure Digital Signature solution for foreign citizens, overseas directors, and international organizations doing business in India.</p>
 
-    <ul class="check-list">
-      <li>Foreign Companies & Overseas Directors</li>
-      <li>International Businesses & Consultants</li>
-    </ul>
+    <strong style="font-size:14px; color:#0f172a; display:block; margin-top:15px;">Suitable For:</strong>
+    <div class="check-grid">
+      <div class="check-item">Foreign Companies</div>
+      <div class="check-item">Overseas Directors</div>
+      <div class="check-item">International Businesses</div>
+      <div class="check-item">Global Consultants</div>
+    </div>
 
     <div class="tags-flex">
       <span class="tag-badge">International Support</span>
@@ -267,16 +329,21 @@ footer a{color:#ffd700;text-decoration:none;margin:0 8px;font-size:12px;}
       <span class="tag-badge">Expert Assistance</span>
     </div>
   </div>
+</section>
 
-  <!-- Document Signer -->
+<!-- PAGE 9: DOCUMENT SIGNER CERTIFICATE -->
+<section class="container" id="signer" style="padding-top:0;">
   <div class="solution-card">
     <h3>Document Signer Certificate</h3>
-    <p>Automate bulk digital signing of invoices, reports, agreements, certificates, and official documents.</p>
+    <p>Automate bulk digital signing of invoices, reports, agreements, certificates, and official documents via software integration.</p>
 
-    <ul class="check-list">
-      <li>ERP Systems & Banks Integration</li>
-      <li>Educational Institutions & Enterprises</li>
-    </ul>
+    <strong style="font-size:14px; color:#0f172a; display:block; margin-top:15px;">Perfect For:</strong>
+    <div class="check-grid">
+      <div class="check-item">ERP Systems</div>
+      <div class="check-item">Banks & NBFCs</div>
+      <div class="check-item">Insurance Companies</div>
+      <div class="check-item">Educational Institutions</div>
+    </div>
 
     <div class="tags-flex">
       <span class="tag-badge">Bulk Document Signing</span>
@@ -286,69 +353,213 @@ footer a{color:#ffd700;text-decoration:none;margin:0 8px;font-size:12px;}
   </div>
 </section>
 
-<!-- PRICING SECTION -->
+<!-- PAGE 10: USB HARDWARE CRYPTO TOKENS -->
+<section class="container" id="tokens" style="padding-top:0;">
+  <h2 class="sec-title">FIPS-Compliant USB Crypto Tokens</h2>
+  <p class="sec-sub">Cryptographic hardware tokens required to store Digital Signature Certificates safely.</p>
+  
+  <div class="solution-card" style="text-align:center;">
+    <img src="https://img.icons8.com/color/144/usb-memory-stick.png" alt="USB Tokens" style="max-width:140px; margin-bottom:15px;">
+    <div class="check-grid" style="max-width:600px; margin:auto;">
+      <div class="check-item">HYP2003 Token</div>
+      <div class="check-item">ProxKey Crypto Token</div>
+      <div class="check-item">mToken Crypto Drive</div>
+      <div class="check-item">Auto Driver Setup</div>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 11: SIMPLE 4-STEP APPLICATION PROCESS -->
+<section class="container" id="process" style="padding-top:0;">
+  <h2 class="sec-title">Our Simple 4-Step Process</h2>
+  <p class="sec-sub">Fast, paperless, and smooth certificate issuance steps.</p>
+
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-number">01</div>
+      <strong style="font-size:15px;">Submit Details</strong>
+      <p style="font-size:12.5px; color:#64748b; margin-top:5px;">Provide basic PAN/Aadhaar information for application setup.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-number">02</div>
+      <strong style="font-size:15px;">Aadhaar OTP & Video</strong>
+      <p style="font-size:12.5px; color:#64748b; margin-top:5px;">Complete mobile OTP check and 20-second smartphone Video KYC.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-number">03</div>
+      <strong style="font-size:15px;">Fast Approval</strong>
+      <p style="font-size:12.5px; color:#64748b; margin-top:5px;">Your DSC is verified and generated securely by the Certifying Authority.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-number">04</div>
+      <strong style="font-size:15px;">Download to Token</strong>
+      <p style="font-size:12.5px; color:#64748b; margin-top:5px;">Download the certificate directly into your USB Crypto Token.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 12: PRICING PLANS -->
 <section class="container" id="pricing" style="padding-top:0;">
   <h2 class="sec-title">Choose the Right Digital Signature Certificate</h2>
-  <p class="sec-sub">Select the Digital Signature Certificate that best fits your business or personal requirements.</p>
+  <p class="sec-sub">Select the plan that fits your personal or organizational requirements.</p>
 
-  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:20px;">
-    
+  <div class="price-grid">
     <div class="price-card">
       <h3>Class 3 Individual DSC</h3>
       <div class="price-amount">₹839 <span>+ GST</span></div>
-      <ul class="check-list">
-        <li>GST & Income Tax Filing</li>
-        <li>Trademark & MCA Filings</li>
-        <li>Paperless e-KYC Verification</li>
-      </ul>
+      <div class="check-grid" style="grid-template-columns:1fr; gap:6px;">
+        <div class="check-item">Income Tax & GST Filing</div>
+        <div class="check-item">Trademark & MCA Filings</div>
+        <div class="check-item">Aadhaar OTP Paperless Process</div>
+      </div>
       <a href="https://wa.me/919473371370?text=Hello%204%20Star%20Mobile,%20I%20want%20to%20apply%20for%20Individual%20DSC" class="btn-blue" target="_blank">Apply DSC</a>
     </div>
 
     <div class="price-card" style="border-color:#2563eb;">
       <h3>Tender / Organization DSC</h3>
       <div class="price-amount">₹1,695 <span>+ GST</span></div>
-      <ul class="check-list">
-        <li>e-Procurement & Tenders</li>
-        <li>GeM Portal Registration</li>
-        <li>Signing + Encryption Combo</li>
-      </ul>
+      <div class="check-grid" style="grid-template-columns:1fr; gap:6px;">
+        <div class="check-item">e-Procurement & Tenders</div>
+        <div class="check-item">GeM Portal Bidding</div>
+        <div class="check-item">Signing + Encryption Combo</div>
+      </div>
       <a href="https://wa.me/919473371370?text=Hello%204%20Star%20Mobile,%20I%20want%20to%20apply%20for%20Tender%20DSC" class="btn-blue" target="_blank">Apply DSC</a>
     </div>
 
+    <div class="price-card">
+      <h3>DGFT DSC (Exporters)</h3>
+      <div class="price-amount">₹1,695 <span>+ GST</span></div>
+      <div class="check-grid" style="grid-template-columns:1fr; gap:6px;">
+        <div class="check-item">DGFT Portal Integration</div>
+        <div class="check-item">IEC License Applications</div>
+        <div class="check-item">Customs Clearance</div>
+      </div>
+      <a href="https://wa.me/919473371370?text=Hello%204%20Star%20Mobile,%20I%20want%20to%20apply%20for%20DGFT%20DSC" class="btn-blue" target="_blank">Apply DSC</a>
+    </div>
   </div>
 </section>
 
-<!-- CONTACT SECTION -->
+<!-- PAGE 13: FEE CALCULATOR / ESTIMATOR -->
+<section class="container" id="estimator" style="padding-top:0;">
+  <div class="solution-card" style="max-width:650px; margin:auto;">
+    <h2 style="font-size:22px; text-align:center; color:#0f172a; margin-bottom:15px;">📊 DSC Fee Estimator</h2>
+    
+    <label for="cert"><strong>Certificate Type:</strong></label>
+    <select id="cert" onchange="calculatePrice()" style="width:100%;padding:10px;margin:8px 0 15px 0; border-radius:8px; border:1px solid #cbd5e1;">
+      <option value="0">Select Certificate Type</option>
+      <option value="839">Class 3 Individual - 1 Year (₹839)</option>
+      <option value="1500">Class 3 Individual - 2 Years (₹1500)</option>
+      <option value="1695">Class 3 Organization / Tender - 2 Years (₹1695)</option>
+      <option value="1695">DGFT Import Export DSC - 2 Years (₹1695)</option>
+      <option value="3800">Foreign National / NRI DSC (₹3800)</option>
+    </select>
+
+    <label for="token"><strong>USB Crypto Hardware Token:</strong></label>
+    <select id="token" onchange="calculatePrice()" style="width:100%;padding:10px;margin:8px 0 15px 0; border-radius:8px; border:1px solid #cbd5e1;">
+      <option value="0">No Token (I have my own USB Token)</option>
+      <option value="600">Yes, Include New FIPS USB Token (+₹600)</option>
+    </select>
+
+    <hr style="margin:15px 0; border:0; border-top:1px solid #e2e8f0;">
+
+    <p style="font-size:13.5px; color:#475569;">Base Fee: ₹ <span id="base">0</span></p>
+    <p style="font-size:13.5px; color:#475569;">USB Token Hardware Fee: ₹ <span id="usb">0</span></p>
+    <p style="font-size:13.5px; color:#475569;">Estimated GST (18%): ₹ <span id="gst">0</span></p>
+
+    <h2 style="color:#0f172a; margin-top:10px; font-size:20px;">Total Estimated Price : ₹ <span id="total">0</span></h2>
+
+    <br>
+    <a id="apply-wa" class="btn-blue" href="https://wa.me/919473371370" target="_blank" style="background:#16a34a;">
+      📲 Request Formal Quote on WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- PAGE 14: USE CASES GRID -->
+<section class="container" id="usecases" style="padding-top:0;">
+  <h2 class="sec-title">Where Is Digital Signature Certificate Used?</h2>
+  <p class="sec-sub">Valid across major portals in India.</p>
+
+  <div class="usecase-grid">
+    <div class="usecase-box-item">🏛️ e-Procurement & Tenders</div>
+    <div class="usecase-box-item">🛍️ GeM Portal Bidding</div>
+    <div class="usecase-box-item">🧾 Tax & GST Portals</div>
+    <div class="usecase-box-item">🏢 MCA / ROC Compliance</div>
+    <div class="usecase-box-item">🚢 DGFT & Customs</div>
+    <div class="usecase-box-item">📑 PDF Invoices Signing</div>
+  </div>
+</section>
+
+<!-- PAGE 15: FAQ & REVIEWS SECTION -->
+<section class="container" id="faq" style="padding-top:0;">
+  <h2 class="sec-title">Frequently Asked Questions</h2>
+  <p class="sec-sub">Quick answers to common questions.</p>
+
+  <div style="max-width:800px; margin:auto;">
+    <div class="faq-item">
+      <h4>Q1. What is a Class 3 Digital Signature Certificate?</h4>
+      <p>It is a secure digital certificate used to sign documents and verify identity online on tax, tender, and corporate portals.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Q2. Is physical document submission required?</h4>
+      <p>No, the process is paperless via Aadhaar OTP and Video KYC from your smartphone.</p>
+    </div>
+  </div>
+
+  <div class="mega-review-card" style="margin-top:40px;">
+    <div class="review-badge-floating">⭐ 5 STAR RATING</div>
+    <h2 class="mockup-google-title">
+      <span class="g-blue">G</span><span class="g-red">o</span><span class="g-yellow">o</span><span class="g-blue2">g</span><span class="g-green">l</span><span class="g-red2">e</span> Reviews
+    </h2>
+    <div style="font-size: 26px; color: #ffc107; letter-spacing: 4px; margin: 8px 0;">⭐⭐⭐⭐⭐</div>
+    
+    <div class="mega-qr-box">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=280x280&data=https://tinyurl.com/Dscknepower-by-4-star-mobile" alt="Google Review QR">
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 16: CONTACT & LOCATION -->
 <section class="container" id="contact" style="padding-top:0;">
-  <h2 class="sec-title">Contact & Location</h2>
-  <div class="solution-card">
-    <p><strong>4 STAR MOBILE (Private Service Setup)</strong></p>
+  <h2 class="sec-title">Contact Us & Location</h2>
+  <div class="solution-card" style="text-align:center;">
+    <p><strong>4 STAR MOBILE (Private Agency)</strong></p>
     <p>Mahaveer Marg, Kishanganj, Bihar - 855107</p>
-    <p>📞 <strong>Phone:</strong> 9473371370</p>
-    <p>💬 <strong>WhatsApp:</strong> 9473371370</p>
+    <p style="margin-top:8px;">📞 <strong>Phone:</strong> 9473371370 | 💬 <strong>WhatsApp:</strong> 9473371370</p>
     <p>✉️ <strong>Email:</strong> contact@4starmobile.com</p>
   </div>
 </section>
 
 <!-- DISCLAIMER BOX (MUST FOR GOOGLE ADS) -->
 <div class="disclaimer-box">
-  <p><strong>IMPORTANT DISCLAIMER:</strong> 4 Star Mobile (DSC Kishanganj) is a privately owned consultancy and service setup[span_1](start_span)[span_1](end_span)[span_2](start_span)[span_2](end_span). We are <strong>NOT affiliated, associated, authorized, endorsed by, or in any way officially connected with any Government agency or department</strong>[span_3](start_span)[span_3](end_span). All Digital Signature Certificates are issued through CCA-authorized Certifying Authorities (CAs) in India[span_4](start_span)[span_4](end_span).</p>
+  <p><strong>IMPORTANT DISCLAIMER:</strong> 4 Star Mobile (DSC Kishanganj) is a privately owned consultancy and service setup. We are <strong>NOT affiliated, associated, authorized, endorsed by, or in any way officially connected with any Government agency or department</strong>. All Digital Signature Certificates are issued through CCA-authorized Certifying Authorities (CAs) in India.</p>
 </div>
 
 <footer>
   <h3>DSC KISHANGANJ</h3>
   <div style="font-size:12px; margin:5px 0 15px 0; color:#bfdbfe;">⚡ POWERED BY 4 STAR MOBILE</div>
   <p style="font-size:12px; color:#cbd5e1;">Digital Signature Certificate Services | USB Tokens | Remote Driver Setup</p>
-  
-  <div style="margin-top: 15px;">
-    <a href="#solutions">Solutions</a> | 
-    <a href="#pricing">Pricing</a> | 
-    <a href="#contact">Contact Us</a>
-  </div>
-
   <p style="margin-top:15px;font-size:11px;color:#94a3b8;">© 2026 DSC Kishanganj (4 Star Mobile). All Rights Reserved.</p>
 </footer>
 
+<script>
+function calculatePrice(){
+  let base = Number(document.getElementById("cert").value);
+  let token = Number(document.getElementById("token").value);
+
+  let subtotal = base + token;
+  let gst = Math.round(subtotal * 0.18);
+  let total = subtotal + gst;
+
+  document.getElementById("base").innerText = base;
+  document.getElementById("usb").innerText = token;
+  document.getElementById("gst").innerText = gst;
+  document.getElementById("total").innerText = total;
+
+  let waMsg = `Hello 4 Star Mobile, I want a quote for Digital Signature Certificate. Total Estimated Price: ₹${total}.`;
+  document.getElementById("apply-wa").href = "https://wa.me/919473371370?text=" + encodeURIComponent(waMsg);
+}
+</script>
+
 </body>
 </html>
-
