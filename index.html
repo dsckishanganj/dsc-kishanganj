@@ -13,7 +13,7 @@
 <!-- Favicon -->
 <link rel="icon" type="image/jpeg" href="https://dsckishanganj.github.io/dsc-kishanganj/Screenshot_20260819-232720_Chrome.png">
 
-<!-- Optimized Web Font Loading for Faster FCP/LCP -->
+<!-- Optimized Font Preloading -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" media="print" onload="this.media='all'">
@@ -44,33 +44,33 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
 body{background:#f5f8fc;color:#111111;line-height:1.7;}
 
-/* Header & Logo */
+/* Header */
 header{background:#001c38;color:#ffffff;padding:12px 6%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000;box-shadow:0 4px 12px rgba(0,0,0,.25);}
 .logo-container {display: flex;align-items: center;gap: 14px;}
 .logo-img {width: 72px;height: 72px;border-radius: 50%;object-fit: cover;background: #ffffff;padding: 2px;border: 2px solid #ffd700;box-shadow: 0 0 12px rgba(255, 215, 0, 0.6);aspect-ratio: 1/1;}
 .logo-text {display: flex;flex-direction: column;}
 .logo{font-size:22px;font-weight:800;line-height: 1.1;letter-spacing: 0.5px;color: #ffffff;}
 
-/* Fixed Contrast Ratio for Tagline */
+/* High Contrast Tagline Fix for Accessibility */
 .sub-tagline {font-size: 11px;background: #ffd700;color: #000000 !important;font-weight: 800;padding: 4px 10px;border-radius: 20px;display: inline-block;margin-top: 4px;text-transform: uppercase;letter-spacing: 0.8px;width: fit-content;white-space: nowrap;}
 
-/* Navigation Links */
+/* Nav */
 nav a{color:#ffffff;text-decoration:none;margin-left:18px;font-weight:600;transition:.3s;font-size:14px;}
 nav a:hover{color:#ffd700;}
 
-/* Hero Banner */
+/* Hero */
 .hero{background:#001932;color:#ffffff;text-align:center;padding:65px 20px;}
 .hero h1{font-size:38px;margin-bottom:15px;font-weight:800;color:#ffffff;}
 .hero p{font-size:17px;max-width:850px;margin:auto;color:#ffffff;}
 
-/* Tokens Section with Fixed Dimensions (Fixes Layout Shift - CLS) */
+/* Fixed Layout Dimensions for CLS Fix */
 .tokens-grid {display: flex;justify-content: center;align-items: center;gap: 20px;flex-wrap: wrap;margin-top: 25px;}
 .token-card {background: rgba(255,255,255,0.15);padding: 12px;border-radius: 12px;text-align: center;border: 1px solid rgba(255,255,255,0.3);backdrop-filter: blur(8px);width: 130px;min-height: 155px;transition:.3s;}
 .token-card:hover{transform:translateY(-5px);background:rgba(255,255,255,0.25);}
 .token-card img {height: 100px;width: 100px;object-fit: contain;display: block;margin: 0 auto 8px auto;filter: drop-shadow(0px 5px 8px rgba(0,0,0,0.4));aspect-ratio: 1/1;}
 .token-card span {font-size: 13px;font-weight: 700;color: #ffd700;display: block;white-space: nowrap;}
 
-/* Accessible Action Buttons */
+/* High Contrast Action Buttons */
 .buttons{margin-top:30px;}
 .btn{display:inline-block;padding:14px 30px;margin:8px;border-radius:50px;text-decoration:none;font-weight:700;transition:.3s;text-align:center;border:none;cursor:pointer;font-size:14px;}
 .call{background:#0d47a1;color:#ffffff;}
@@ -80,7 +80,7 @@ nav a:hover{color:#ffd700;}
 .location-btn{background:#00695c;color:#ffffff;}
 .btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(0,0,0,.25);}
 
-/* Structural Elements */
+/* Layout */
 .container{width:90%;max-width:1200px;margin:auto;padding:50px 0;}
 .section-title{text-align:center;font-size:34px;color:#001c38;margin-bottom:12px;font-weight:800;}
 .section-sub{text-align:center;color:#111111;margin-bottom:40px;font-size:15px;font-weight:600;}
@@ -91,7 +91,7 @@ nav a:hover{color:#ffd700;}
 .card ul{padding-left:18px;}
 .card ul li{margin-bottom:8px;color:#111111;font-weight:500;}
 
-/* Reviews Section */
+/* Review Section */
 .mega-review-card {
   max-width: 650px;
   margin: auto;
@@ -134,7 +134,6 @@ nav a:hover{color:#ffd700;}
 .map-responsive{overflow:hidden;padding-bottom:56.25%;position:relative;height:0;border-radius:18px;box-shadow:0 8px 20px rgba(0,0,0,.08);margin-top:15px;}
 .map-responsive iframe{left:0;top:0;height:100%;width:100%;position:absolute;border:0;}
 
-/* High Contrast Disclaimer */
 .disclaimer-box {
   background: #fff8e1;
   border: 2px solid #5c4000;
@@ -167,7 +166,6 @@ footer a:hover{text-decoration:underline;}
 
 <body>
 
-<!-- HEADER LANDMARK -->
 <header>
   <div class="logo-container">
     <img src="IMG-20260803-WA0077.jpg" alt="4 STAR MOBILE - DSC Kishanganj Logo" class="logo-img" width="72" height="72" fetchpriority="high">
@@ -186,10 +184,7 @@ footer a:hover{text-decoration:underline;}
   </nav>
 </header>
 
-<!-- MAIN LANDMARK -->
 <main>
-
-  <!-- HERO SECTION -->
   <section class="hero">
     <h1>Digital Signature Certificate Services in Kishanganj</h1>
     <p>Private Assistance for Class 3 Digital Signature Certificate (DSC) Issuance, USB Crypto Hardware Tokens, & Certificate Renewal Support in Kishanganj, Bihar.</p>
@@ -218,7 +213,6 @@ footer a:hover{text-decoration:underline;}
     </div>
   </section>
 
-  <!-- SERVICES SECTION -->
   <section class="container" id="services">
     <h2 class="section-title">Our Digital Signature Certificate Services</h2>
     <p class="section-sub">Professional Private Support for Digital Signature Certificates & USB Tokens</p>
@@ -254,7 +248,6 @@ footer a:hover{text-decoration:underline;}
     </div>
   </section>
 
-  <!-- ABOUT SECTION -->
   <section class="container" id="about">
     <h2 class="section-title">About DSC Kishanganj</h2>
     <p style="text-align:center;max-width:900px;margin:auto;font-size:18px;color:#111111;">
@@ -262,7 +255,6 @@ footer a:hover{text-decoration:underline;}
     </p>
   </section>
 
-  <!-- CALCULATOR SECTION -->
   <section class="container" id="price-calculator">
     <h2 class="section-title">📊 DSC Fee Estimator</h2>
     <p class="section-sub">Calculate estimated charges and request an official quote</p>
@@ -308,7 +300,6 @@ footer a:hover{text-decoration:underline;}
     </div>
   </section>
 
-  <!-- REVIEWS SECTION -->
   <section class="container" id="reviews">
     <div class="mega-review-card">
       <div class="review-badge-floating">⭐ 5 STAR RATING</div>
@@ -330,7 +321,6 @@ footer a:hover{text-decoration:underline;}
     </div>
   </section>
 
-  <!-- CONTACT & LOCATION SECTION -->
   <section class="container" id="contact">
     <h2 class="section-title">Contact Us & Location</h2>
     <div class="cards">
@@ -355,14 +345,11 @@ footer a:hover{text-decoration:underline;}
     </div>
   </section>
 
-  <!-- DISCLAIMER -->
   <div class="disclaimer-box">
     <p><strong>IMPORTANT DISCLAIMER:</strong> 4 Star Mobile (DSC Kishanganj) is a privately owned domain and service setup. We are <strong>NOT affiliated, associated, authorized, endorsed by, or in any way officially connected with any Government agency or government body</strong>. All digital signature certificates are issued through authorized Certifying Authorities (CAs) in India.</p>
   </div>
-
 </main>
 
-<!-- FOOTER LANDMARK -->
 <footer>
   <h3>DSC KISHANGANJ</h3>
   <div class="sub-tagline" style="margin: 8px auto 15px auto;">⚡ PRIVATE SERVICE BY 4 STAR MOBILE</div>
